@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản lý cửa hàng</title>
+    <link rel="stylesheet" href="/styles/base.css" class="">
+    <link rel="stylesheet" href="/styles/header.css" class="">
+    <link rel="stylesheet" href="/styles/manager.css">
+    <link rel="stylesheet" href="/styles/managements/books.css">
+    <link rel="stylesheet" href="/styles/managements/menu.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/customer/order.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+    <link rel="stylesheet" href="/styles/container.css">
+    <link rel="stylesheet" href="/styles/customer.css">
+    <link rel="stylesheet" href="/styles/bill.css">
+    <link rel="stylesheet" href="/styles/showitem.css">
+    <link rel="stylesheet" href="/styles/showbook.css">
+
+</head>
+
+<body>
+    <div class="app grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo__img" src="/assets/images/logo.png" alt="logo">
+                </div>
+
+                <div class="service">
+                    <div class="service__home">
+                        <i class="service__home--icon fa-solid fa-house"></i>
+                        <p class="service_home--text">Trang chủ</p>
+                    </div>
+                    <div class="service_intro">
+                        <i class="service__intro--icon fa-solid fa-exclamation"></i>
+                        <p class="service__intro--text">Giới thiệu</p>
+                    </div>
+                    <div class="service__login">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                        <a href="index.html" class="service__login--text">Đăng xuất</a>
+                    </div>
+                    <div class="view-profile service__signup">
+                        <i class="service__signup--icon fa-solid fa-user"></i>
+                        <p class="service__signup--text">Đức Huy</p>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="manager">
+            <!-- FUNCTION -->
+            <i class="btn_nav function__icon fa-solid fa-bars"></i>
+            <div class="fn_nav function">
+                <ul class="function__list">
+                    <a href="#" data-target="guild" class="using bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-question"></i>
+                        <p class="function__item--name">Giới thiệu</p>
+                    </a>
+                    <a href="#" data-target="manage-book" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-book"></i>
+                        <p class="function__item--name">Quản lý sách</p>
+                    </a>
+                    <a href="#" data-target="manage-menu" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-utensils"></i>
+                        <p class="function__item--name">Quản lý Menu</p>
+                    </a>
+
+                    <a href="#" data-target="manage-employee" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-person"></i>
+                        <p class="function__item--name">Quản lý nhân viên</p>
+                    </a>
+
+                    <a href="#" data-target="manage-order" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-briefcase"></i>
+                        <p class="function__item--name">Quản lý đơn hàng</p>
+                    </a>
+
+                    <a href="#" data-target="manage-bill" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-money-bills"></i>
+                        <p class="function__item--name">Quản lý hóa đơn</p>
+                    </a>
+
+                    <a href="#" data-target="report" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-chart-line"></i>
+                        <p class="function__item--name">Báo cáo thống kê</p>
+                    </a>
+                    <a href="#" data-target="manage-customer" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-shop"></i>
+                        <p class="function__item--name">Quản lý khách hàng</p>
+                    </a>
+
+                    <a href="#" data-target="manage-premium" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-crown"></i>
+                        <p class="function__item--name">Quản lý hội viên</p>
+                    </a>
+                    <a href="#" data-target="borrow-book" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-ticket"></i>
+                        <p class="function__item--name">Phiếu Mượn Sách</p>
+                    </a>
+                </ul>
+            </div>
+            <div style="width:100%;" class="">
+                <!-- GUILD -->
+                <div id="guild" class="using bar-target guild">
+                    <div class="guilbg">
+                        <div class="guild-left">
+                            <img class="guild-img" src="/assets/images/intro/bg.png" alt="">
+                            <img class="guild-img" src="/assets/images/intro/coffe.png" alt="">
+                            <!-- <img class="guild-img" src="/assets/images/intro/coffe.png" alt=""> -->
+                        </div>
+                        <div class="guild-content">
+                            <h3 class="guild--title">
+                                CHÀO MỪNG ĐẾN VỚI CỬA HÀNG CÀ PHÊ SÁCH
+                            </h3>
+                            <p class="guild--text">
+
+                                Chào mừng đến với Cửa hàng Cà phê Sách của chúng tôi! Đây là nơi tuyệt vời để bạn thả
+                                mình vào thế giới hưởng ứng cùng vị ngọt của cà phê và những câu chuyện thú vị từ sách.
+                            </p>
+
+                            <p class="guild--text">
+                                Tại cửa hàng của chúng tôi, bạn có thể tận hưởng không gian ấm cúng, với mùi hương cà
+                                phê phảng phất và hài hòa. Chúng tôi sẽ cung cấp cho bạn những ly cà phê tuyệt vời có
+                                mùi hương và hương vị tuyệt đỉnh, từ những hạt cà phê chọn lọc kỹ càng.
+                            </p>
+
+                            <p class="guild--text">
+                                Ngoài cà phê thơm ngon, chúng tôi cũng có một bộ sưu tập sách phong phú đa dạng từ các
+                                thể loại, bao gồm tiểu thuyết, kinh tế, khoa học, lịch sử và hơn thế nữa. Bạn có thể
+                                ngồi thư giãn trong không gian yên bình của cửa hàng của chúng tôi, đọc sách mới hoặc
+                                tìm kiếm những tác phẩm kinh điển được yêu thích.
+                            </p>
+
+                            <p class="guild--text">
+                                Đội ngũ chúng tôi toàn bộ là những người đam mê văn hóa đọc, chúng tôi rất sẵn lòng giới
+                                thiệu cho bạn những cuốn sách hấp dẫn, cũng như chia sẻ kinh nghiệm và gợi ý về cà phê
+                                ngon. Chúng tôi cam kết tạo ra một trải nghiệm đáng nhớ, mang đến sự hài lòng cho mỗi
+                                khách hàng.
+                            </p>
+
+                            <p class="guild--text">
+                                Vậy nên, hãy đến và thử cảm nhận nhé! Chúng tôi rất mong được đón tiếp bạn tại Cửa hàng
+                                Cà phê Sách của chúng tôi. Hãy đắm chìm trong không gian thoải mái và thưởng thức những
+                                món cà phê thượng hạng cùng những tác phẩm văn học đáng kinh ngạc.
+                            </p>
+                        </div>
+                        <div class="guild-right">
+                            <!-- <img class="guild-img" src="/assets/images/intro/bean.png" alt=""> -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK MANAGEMENT FUNCTION -->
+                <div id="manage-book" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ SÁCH</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm sách" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Hình ảnh</p>
+                                <p class="manage__book--name">ID sách</p>
+                                <p class="manage__book--name">Tên sách</p>
+                                <p class="manage__book--name">Mô tả về sách</p>
+                                <p class="manage__book--name">Thể loại</p>
+                                <p class="manage__book--name">Sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/demen.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">100</p>
+                                <p class="manage__book--name">Dế mèn phiêu lưu ký</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Tô Hoài</p>
+                                <p class="manage__book--name">Fiction</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/machinelearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">1287491</p>
+                                <p class="manage__book--name">Machine Learning Yearning</p>
+                                <p class="manage__book--name">Mô tả về sách: Cuốn sách được viết bởi AndrewNg</p>
+                                <p class="manage__book--name">Science</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/datascience.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">108280</p>
+                                <p class="manage__book--name">Practical Data Science</p>
+                                <p class="manage__book--name">Mô tả về sách: Giới thiệu cho người nhập môn các khái niệm
+                                    trong DS</p>
+                                <p class="manage__book--name">Science</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/deeplearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">423100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Goodfellơ, Yóua Bengio</p>
+                                <p class="manage__book--name">Science</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/tensorflow.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">4237100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: O'Reilli Tensorflow 2 là một cẩm nang về
+                                    tất cả các khái niệm, cách sử dụng framework tesorflow</p>
+                                <p class="manage__book--name">Science</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/deeplearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">123100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Goodfellơ, Yóua Bengio</p>
+                                <p class="manage__book--name">Science</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm sách</button>
+                    </form>
+                </div>
+
+                <!-- MENU MANAGEMENT FUNCTION -->
+                <div id="manage-menu" class="bar-target manage__menu">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ MENU</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm menu" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Hình ảnh</p>
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">Tên món</p>
+                                <p class="manage__book--name">Mô tả về món</p>
+                                <p class="manage__menu--name">Giá cả</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/menu/latte.jpg" alt="ảnh sách"
+                                    class="view__item manage__book--img manage__frame">
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/glace.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/black.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/coffe.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/capuchino.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/mochacip.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/normal.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/capuchino.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/muoi.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/noodles.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/beefsteak.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--after">
+                                <i class="btn--number fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm món mới</button>
+                    </form>
+                </div>
+
+                <!-- EMPLOYEE MANAGEMENT FUNCTION -->
+                <div id="manage-employee" style="width:900px;" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ NHÂN VIÊN</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm nhân viên (ID/Tên)" type="text"
+                                class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Mã ID</p>
+                                <p class="manage__book--name">Họ</p>
+                                <p class="manage__book--name">Tên</p>
+                                <p class="manage__book--name">Tuổi</p>
+                                <p class="manage__book--name">Chức vụ</p>
+                                <p class="manage__book--name">Lương</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">Nguyễn</p>
+                                <p class="manage__book--name">Đình Quý</p>
+                                <p class="manage__book--name">40</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">5.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">Nguyễn</p>
+                                <p class="manage__book--name">Hữu Cao</p>
+                                <p class="manage__book--name">23</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">6.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">7</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">8</p>
+                                <p class="manage__book--name">Phạm</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">22</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">9</p>
+                                <p class="manage__book--name">Đào</p>
+                                <p class="manage__book--name">Văn Hùng</p>
+                                <p class="manage__book--name">24</p>
+                                <p class="manage__book--name">Nhân viên</p>
+                                <p class="manage__book--name">2.000.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm Nhân viên</button>
+                    </form>
+                </div>
+                <!-- ORDER MANAGEMENT FUNCTION -->
+                <div id="manage-order" class="bar-target manage__book">
+                    <ul class="customer__function--list">
+
+                        <li class="customer__function--item">
+                            <a href="#" class="all-order active menu-link">
+                                <i class="customer__function--icon fa-brands fa-buysellads"></i>
+                                <h3 class="customer__function--title">Tất cả</h3>
+                            </a>
+                        </li>
+
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="waiting-order">
+                                <i class="customer__function--icon fa-solid fa-money-bill"></i>
+                                <h3 class="customer__function--title">Đơn tại quầy</h3>
+                            </a>
+                        </li>
+
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="waiting-order">
+                                <i class="customer__function--icon fa-solid fa-money-check"></i>
+                                <h3 class="customer__function--title">Đơn online</h3>
+                            </a>
+                        </li>
+
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="waiting-order">
+                                <i class="customer__function--icon fa-solid fa-check-to-slot"></i>
+                                <h3 class="customer__function--title">Chờ được xác nhận</h3>
+                            </a>
+                        </li>
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="preparing-order">
+                                <i class="customer__function--icon fa-solid fa-mug-hot"></i>
+                                <h3 class="customer__function--title">Đang chuẩn bị</h3>
+                            </a>
+                        </li>
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="shiping-order">
+                                <i class="customer__function--icon fa-solid fa-truck"></i>
+                                <h3 class="customer__function--title">Đang giao hàng</h3>
+                            </a>
+                        </li>
+
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="shiped-order">
+                                <i class="customer__function--icon fa-solid fa-table"></i>
+                                <h3 class="customer__function--title">Lịch sử đơn hàng</h3>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="order__search">
+                        <i class="order__search--icon fa-solid fa-search"></i>
+                        <input placeholder="Tìm kiếm đơn hàng" type="text" class="order__search--input">
+                    </div>
+                    <div class="order__fn">
+                        <!-- Waiting Confirm -->
+                        <ul id="waiting-order" class="menu-target order__listt">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="view__item cart__item--img" src="/assets/images/menu/coffe.jpg"
+                                            alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Khi nhận hàng</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/capuchino.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+                        </ul>
+                        <!-- Preparing -->
+                        <ul id="preparing-order" class="order__list menu-target">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang chờ chuẩn bị</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/latte.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/black.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="blue">Tại Quầy</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang chờ chuẩn bị</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                            </li>
+                        </ul>
+                        <!-- Shiping -->
+                        <ul id="shiping-order" class="order__list menu-target order-preparing">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Success -->
+                        <ul id="shiped-order" class="order__list menu-target order-preparing">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Giao hàng thành công</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="blue">Tại Quầy</p>
+                                </div>
+
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/cream.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/capuchino.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/fish.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Khi nhận hàng</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Giao hàng không thành công</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/banhquy.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <button class="btn--exit">Xem thêm</button>
+                    </div>
+
+                    <script src="/scripts/order.js"></script>
+                </div>
+                <!-- BILL MANAGEMENT FUNCTION -->
+                <div style="max-width:900px ;" id="manage-bill" class="bar-target manage__book">
+                    <form class=" manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ HOÁ ĐƠN</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm hóa đơn" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">Loại</p>
+                                <p class="manage__book--name">Thời gian</p>
+                                <p class="manage__book--name">Ngày</p>
+                                <p class="manage__book--name">Chi tiết</p>
+                                <p class="manage__book--name">Số Sản Phẩm</p>
+                                <p class="manage__book--name">Tổng tiền</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">7</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">8</p>
+                                <p class="manage__book--name">Online</p>
+                                <p class="manage__book--name">21:21:12</p>
+                                <p class="manage__book--name">20/2/2023</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-bill manage__book--name">Xem chi
+                                    tiết</button>
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">200.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm hóa đơn</button>
+
+                    </form>
+
+                    <!-- BILL detail -->
+                    <div class="bill">
+                        <form action="" class="bill__form">
+                            <h3 class="bill__title">Hóa Đơn Cửa Hàng Cà Phê Sách</h3>
+                            <ul class="bill__info">
+                                <li class="bill_item">Mã hóa đơn: 29319389</li>
+                                <li class="bill_item">Thời gian: 12:23:02</li>
+                                <li class="bill_item">Ngày mua: 20/12/2022</li>
+                                <li class="bill_item">Loại hóa đơn: Online</li>
+                                <li class="bill_item">Hình thức thanh toán: Chuyển khoản</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">STT</li>
+                                <li class="bill_item">Tên sản phẩm</li>
+                                <li class="bill_item">Số lượng</li>
+                                <li class="bill_item">Đơn giá</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">Coffe mocha</li>
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">20.000 đ</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">Coffe Đen</li>
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">20.000 đ</li>
+                            </ul>
+
+                            <ul class="bill__total">
+                                <li class="bill_item">Tổng số lượng: 2</li>
+                                <li class="bill_item">Tổng giá tiền: 40.000 đ</li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <!-- CUSTOMER MANAGEMENT FUNCTION -->
+                <div id="manage-customer" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ TÀI KHOẢN KHÁCH HÀNG</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm khách hàng (Số điện thoại)" type="text"
+                                class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Mã ID</p>
+                                <p class="manage__book--name">User Name</p>
+                                <p class="manage__book--name">Số điện thoại</p>
+                                <p class="manage__book--name">Email</p>
+                                <p class="manage__book--name">Địa chỉ</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">trung32@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">Dũng</p>
+                                <p class="manage__book--name">0921273176</p>
+                                <p class="manage__book--name">áiduaiódu@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">Tâm</p>
+                                <p class="manage__book--name">09212893176</p>
+                                <p class="manage__book--name">aoíđíau@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">Cá Ngừ</p>
+                                <p class="manage__book--name">092193176</p>
+                                <p class="manage__book--name">aoíđíadạu@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">Khe Huy Diet Shiper</p>
+                                <p class="manage__book--name">092193176</p>
+                                <p class="manage__book--name">hádhkjáhd@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">COffe Bitch</p>
+                                <p class="manage__book--name">09293176</p>
+                                <p class="manage__book--name">áhđahjh@gamil.com</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- PREMIUM MANAGEMENT FUNCTION -->
+                <div style="max-width:980px ;" id="manage-premium" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ KHÁCH HỘI VIÊN</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm khách hàng (Số điện thoại)" type="text"
+                                class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">Họ</p>
+                                <p class="manage__book--name">Tên</p>
+                                <p class="manage__book--name">Số điện thoại</p>
+                                <p class="manage__book--name">Địa chỉ</p>
+                                <p class="manage__book--name">Ngày đăng ký</p>
+                                <p class="manage__book--name">Ngày hết hạn</p>
+                                <p class="manage__book--name">Sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">7</p>
+                                <p class="manage__book--name">Hoàng</p>
+                                <p class="manage__book--name">Trung</p>
+                                <p class="manage__book--name">0921313176</p>
+                                <p class="manage__book--name">123 Giải Phóng, Hai Bà Trưng, Hà Nội</p>
+                                <p class="manage__book--name">09/10/2023</p>
+                                <p class="manage__book--name">09/11/2023</p>
+
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- REPORT & STATISTICS FUNCTION -->
+                <div id="report" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">BÁO CÁO THỐNG KÊ</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm báo cáo thốn kê" type="text"
+                                class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">Ngày </p>
+                                <p class="manage__book--name">Họ người tạo</p>
+                                <p class="manage__book--name">Tên người tạo</p>
+                                <p class="manage__book--name">Chi tiết</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">20-10-2023</p>
+                                <p class="manage__book--name">Nguyễn</p>
+                                <p class="manage__book--name">Văn A</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">20-10-2023</p>
+                                <p class="manage__book--name">Nguyễn</p>
+                                <p class="manage__book--name">Văn A</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">20-10-2023</p>
+                                <p class="manage__book--name">Nguyễn</p>
+                                <p class="manage__book--name">Văn A</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">28-10-2023</p>
+                                <p class="manage__book--name">Đào</p>
+                                <p class="manage__book--name">Đức Huy</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">28-10-2023</p>
+                                <p class="manage__book--name">Đào</p>
+                                <p class="manage__book--name">Đức Huy</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">28-10-2023</p>
+                                <p class="manage__book--name">Đào</p>
+                                <p class="manage__book--name">Đức Huy</p>
+                                <button class="report-detail" style="font-weight:bold; margin:0 10px">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Tạo Báo Cáo</button>
+                        <!-- REPORT -->
+                        <div class="report">
+                            <img src="/assets/images/report.png" alt="bao cao" class="report--img">
+                        </div>
+                        <script src="/scripts/report.js"></script>
+                    </form>
+                </div>
+                <!-- BORROW BOOK -->
+                <div style="max-width:900px ;" id="borrow-book" class="bar-target manage__book">
+                    <form class="borrow-form manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ PHIẾU MƯỢN SÁCH</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm hóa đơn" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">ID Hội viên</p>
+                                <p class="manage__book--name">ID Sách</p>
+                                <p class="manage__book--name">Ngày mượn</p>
+                                <p class="manage__book--name">Ngày trả</p>
+                                <p class="manage__book--name">Trạng thái</p>
+                                <p class="manage__book--name">Chi tiết</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">1</p>
+                                <p class="manage__book--name">10</p>
+                                <p class="manage__book--name">12323</p>
+                                <p class="manage__book--name">20/10/2023</p>
+                                <p class="manage__book--name">20/12/2023</p>
+                                <p class="manage__book--name red">Chưa trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">2</p>
+                                <p class="manage__book--name">21</p>
+                                <p class="manage__book--name">121123</p>
+                                <p class="manage__book--name">20/01/2023</p>
+                                <p class="manage__book--name">20/02/2023</p>
+                                <p class="manage__book--name green">Đã trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">3</p>
+                                <p class="manage__book--name">12</p>
+                                <p class="manage__book--name">21393</p>
+                                <p class="manage__book--name">20/10/2023</p>
+                                <p class="manage__book--name">20/12/2023</p>
+                                <p class="manage__book--name red">Chưa trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">4</p>
+                                <p class="manage__book--name">8</p>
+                                <p class="manage__book--name">11123</p>
+                                <p class="manage__book--name">20/01/2023</p>
+                                <p class="manage__book--name">20/08/2023</p>
+                                <p class="manage__book--name green">Đã trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">5</p>
+                                <p class="manage__book--name">14</p>
+                                <p class="manage__book--name">912323</p>
+                                <p class="manage__book--name">20/10/2023</p>
+                                <p class="manage__book--name">20/12/2023</p>
+                                <p class="manage__book--name red">Chưa trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">6</p>
+                                <p class="manage__book--name">9</p>
+                                <p class="manage__book--name">91123</p>
+                                <p class="manage__book--name">20/01/2023</p>
+                                <p class="manage__book--name">20/02/2023</p>
+                                <p class="manage__book--name green">Đã trả</p>
+                                <button style="font-weight: bold;background-color: none;"
+                                    class="show-borrow manage__book--name">Xem chi
+                                    tiết</button>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm hóa đơn</button>
+
+                    </form>
+
+                    <!-- borrow detail -->
+                    <div class="borrow-frame">
+                        <form action="" class="bill__form">
+                            <h3 class="bill__title">Phiếu mượn sách</h3>
+                            <ul class="bill__info">
+                                <li class="bill_item">Mã phiếu: 1</li>
+                                <li class="bill_item">Mã Hội Viên:10</li>
+                                <li class="bill_item">Mã Sách: 12323</li>
+                                <li class="bill_item">Ngày mượn: 20/10/2023</li>
+                                <li class="bill_item">Ngày trả: 20/12/2022</li>
+                                <li class="bill_item">Trạng thái: Đã trả</li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="/scripts/navbar.js"></script>
+        <script src="/scripts/changemenu.js"></script>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">VỀ CHÚNG TÔI</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Di sản</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Công ty</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">DỊCH VỤ KHÁCH HÀNG</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Câu hỏi thường gặp</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Hotline</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN KẾT NHANH</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Dịch vụ cửa hàng</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Dành cho đối tác</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN HỆ</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. GOOGLE</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. FACEBOOK</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">3. GMAIL</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">4. Địa chỉ: 55 Giải Phóng, Đồng Tâm, Hai Bà Trung, Hà
+                        Nội</a>
+                </li>
+
+            </ul>
+        </footer>
+        <!-- PROFILE -->
+        <div class="profile">
+            <form class="profile__form">
+                <h3 class="profile__title">Thông tin người dùng</h3>
+                <i class="profile__user--icon fa-solid fa-user"></i>
+                <p class="profile__user--name">Đào Đức Huy</p>
+                <ul class="profile__list">
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên tài khoản:</p>
+                        <p class="profile__item--info">Đào Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Họ:</p>
+                        <p class="profile__item--info">Đào</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên:</p>
+                        <p class="profile__item--info">Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Giới tính:</p>
+                        <p class="profile__item--info">Nam</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ email:</p>
+                        <p class="profile__item--info">huy0215066@huce.edu.vn</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ người dùng:</p>
+                        <p class="profile__item--info">Hải Phòng</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Số điện thoại:</p>
+                        <p class="profile__item--info">0912345678</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Quyền người dùng:</p>
+                        <p class="profile__item--info">Quản lý</p>
+                    </li>
+                </ul>
+                <div class="profile__function">
+                    <a href="index.html" class="">
+                        <button class="btn--logout">
+                            Đăng xuất
+                        </button>
+                    </a>
+                    <button class="btn">Đổi Mật Khẩu</button>
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="profile-exit btn--exit">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/base.js"></script>
+        <script src="/scripts/profile.js"></script>
+        <!-- SHOW MENU -->
+        <div class="show__item">
+            <form action="" class="form__item">
+                <div class="form__img">
+                    <img src="/assets/images/menu/latte.jpg" alt="" class="form__item--img">
+                </div>
+                <div class="ul form__item--info">
+                    <h3 class="form__item--name">Cà phê</h3>
+                    <p class="form__item--text">Mô tả: Cà phê là món thức uống gần như mỗi ngày của thế giới. Người uống
+                        vì cần sự tỉnh táo cho ngày mới. Người thưởng thức vì yêu thích hương vị tuyệt vời của nó. Có
+                        người chỉ uống vì một thói quen đơn giản.</p>
+                    <p class="form__item--text">Tùy chọn size: </p>
+                    <ul class="size__list">
+                        <li class="size__item">M</li>
+                        <li class="size__item">L</li>
+                        <li class="size__item">XL</li>
+                    </ul>
+                    <p class="form__item--text">Gía tiền: 20.000 đ</p>
+                </div>
+
+                <div class="form__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showitem.js"></script>
+
+        <!-- SHOW BOOK -->
+        <div class="show__book">
+            <form action="" class="form__book">
+                <div class="form__img">
+                    <img src="" alt="" class="form__book--img">
+                </div>
+                <div class="ul form__book--info">
+                    <h3 class="form__book--name">Dế mèn phiêu lưu ký</h3>
+                    <p class="form__book--text">Mã sách: 12938123</p>
+                    <p class="form__book--text">Tên tác giả: Tô Hoài</p>
+                    <p class="form__book--text">Thể loại: Fiction</p>
+                    <p class="form__book--text">Nhà xuất bản: Nhà Xuất Bản Văn Học</p>
+                    <p class="form__book--descibe">Tác phẩm kinh điển Dế Mèn Phiêu Lưu Ký cử nhà văn Tô Hoài đã gắn liền
+                        với tuổi thơ của rất nhiều người.
+
+                        Dế Mèn phiêu lưu ký được xem là những trang văn mẫu mực của văn học thiếu nhi. Dường như mọi
+                        câu, đoạn, hình ảnh đều tác động mạnh mẽ đến tư tưởng tình cảm thẩm mỹ của người đọc. Tác phẩm
+                        miêu tả cuộc phiêu lưu của một chú Dế Mèn qua thế giới loài vật và loài người.
+
+                        Những vấn đề nóng hổi như là: cái thiện và cái ác, chiến tranh và hòa bình, lí tưởng và lẽ sống
+                        được thể hiện một cách nhẹ nhàng, tinh tế mà sâu sắc. Mèn đã trải qua những cuộc phiêu lưu vào
+                        thế giới các loài vật, vượt qua cơ man nào là rủi ro và biến cố, nhưng từng bước Mèn vươn lên tự
+                        điều chỉnh, tự nhận thức để trở thành con người giàu lí tưởng và ham hiểu biết với bản lĩnh kiên
+                        cường của một trai tráng đầu đội trời chân đập đất.
+
+                        Chúng ta sẽ được lạc vào thế giới loài vật gần gũi, thân thương với toàn những con vật gắn chặt
+                        với đời sống thôn quê dân dã như: bác Xiến Tóc, Võ sĩ bọ ngựa, Châu Chấu Voi, Ếch Cốm, Chuồn
+                        Chuồn…</p>
+                    <p class="form__book--text">Trạng thái:</p>
+                    <button class="btn--add">Đang còn</button>
+                </div>
+
+                <div class="book__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showbook.js"></script>
+</body>
+
+</html>

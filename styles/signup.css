@@ -1,0 +1,45 @@
+.signup {
+    background-color: var(--white-color);
+    width: 550px;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 500px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup__label {
+    font-size: 2rem;
+    margin: auto;
+}
+
+.signup__info--list {}
+
+.signup__info--item {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.signup__text {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.signup__cancel {
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    color: var(--white-color);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup__cancel:hover {
+    opacity: .7;
+}

@@ -1,0 +1,146 @@
+.app {
+    margin: auto;
+}
+
+.header {
+    background-color: var(--black-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-color: var(--black-color);
+}
+
+.logo__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: Rotate 8s linear infinite;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    width: 40%;
+    flex-wrap: wrap;
+}
+
+.service__home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+.service__home:hover {
+    opacity: .7;
+}
+
+.service__home--icon {
+    font-size: 20px;
+    color: var(--white-color)
+}
+
+.service_home--text {
+    color: var(--white-color);
+}
+
+.service_intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+.service_intro:hover {
+    opacity: .7;
+}
+
+.service__intro--icon {
+    font-size: 24px;
+    color: var(--white-color);
+    margin: 0 2px;
+}
+
+.service__intro--text {
+    color: var(--white-color);
+}
+
+.service__login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+.service__login:hover {
+    opacity: .7;
+}
+
+.service__login--icon {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.service__login--text {
+    color: var(--white-color);
+}
+
+.service__signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+.service__signup:hover {
+    opacity: .7;
+}
+
+.service__signup--icon {
+    font-size: 20px;
+    color: var(--white-color);
+}
+
+.service__signup--text {
+    color: var(--white-color);
+}
+
+/* SEARCH */
+.search {
+    width: 60%;
+}
+
+.search__box--icon {
+    color: var(--white-color);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.search__box--input {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}

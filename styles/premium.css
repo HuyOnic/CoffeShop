@@ -1,0 +1,141 @@
+.intro__premium--frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    animation: Grow .3s ease-in-out;
+}
+
+.intro__premium--form {
+    margin: auto;
+    background-image: url(/assets/images/bgform.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    border-radius: 20px;
+    width: 700px;
+    position: relative;
+    animation: LightEff 6s ease-in-out infinite;
+}
+
+.intro__premium--form::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/backgrounds/star1.png);
+    animation: animate 6s ease-in-out infinite;
+}
+
+
+@keyframes LightEff {
+    0% {
+        box-shadow: 0 0 10px var(--yellow-color);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--yellow-color);
+    }
+
+    100% {
+        box-shadow: 0 0 10px var(--yellow-color);
+    }
+}
+
+.intro__premium--title {
+    color: var(--white-color);
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px var(--quit-color);
+    margin: 20px 0;
+}
+
+.intro__premium--text {
+    color: var(--white-color);
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px var(--quit-color);
+}
+
+.intro__premium--list {}
+
+.intro__premium--item {
+    display: flex;
+}
+
+.intro__premium--img {
+    width: 300px;
+    height: 280px;
+
+    /* transform-origin: 100% 50%; */
+}
+
+
+@keyframes Path {
+    0% {
+        width: 300px;
+        height: 280px;
+    }
+
+    50% {
+        width: 250px;
+        height: 250px;
+    }
+
+    100% {
+        width: 300px;
+        height: 280px;
+    }
+}
+
+.intro__premium--o {
+    position: absolute;
+    bottom: -100px;
+    right: 0px;
+    animation-delay: .3s;
+    animation: R2L 1.2s ease-in-out;
+}
+
+@keyframes R2L {
+    from {
+        opacity: 0;
+        transform: translateX(240px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.intro__premium--t {
+    position: absolute;
+    top: -250px;
+    left: -200px;
+    transform: rotate(-40deg);
+    transform-origin: 100% 50%;
+    animation: Path 6s ease infinite;
+}
+
+.intro__premium--th {
+    position: absolute;
+    right: -130px;
+    top: -130px;
+    transform: scaleX(-1);
+    transform: rotate(60deg);
+    animation: Path 6s ease infinite;
+
+}
+
+.intro__premium--f {
+    position: absolute;
+    left: -220px;
+    bottom: -120px;
+    transform: scaleX(-1);
+    transform: rotate(-120deg);
+    animation: Path 6s ease infinite;
+
+}

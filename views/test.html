@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện cho nhân viên/title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<head>
+    <style>
+        .active {
+            font-weight: bold;
+        }
+
+        .menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" class="menu-link" data-target="menu1">Menu 1</a></li>
+        <li><a href="#" class="menu-link" data-target="menu2">Menu 2</a></li>
+        <li><a href="#" class="menu-link" data-target="menu3">Menu 3</a></li>
+    </ul>
+
+    <div id="menu1" class="menu">
+        <h2>Menu 1 Content</h2>
+        <p>This is the content of menu 1.</p>
+    </div>
+
+    <div id="menu2" class="menu">
+        <h2>Menu 2 Content</h2>
+        <p>This is the content of menu 2.</p>
+    </div>
+
+    <div id="menu3" class="menu">
+        <h2>Menu 3 Content</h2>
+        <p>This is the content of menu 3.</p>
+    </div>
+
+    <script>
+        const menuLinks = document.querySelectorAll('.menu-link');
+        const menus = document.querySelectorAll('.menu');
+
+        // Add click event listener to each menu link
+        menuLinks.forEach(function (menuLink) {
+            menuLink.addEventListener('click', function (event) {
+                // Prevent the default link behavior
+                event.preventDefault();
+
+                // Get the target menu to show
+                const target = this.getAttribute('data-target');
+
+                // Remove 'active' class from all menu links
+                menuLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked menu link
+                this.classList.add('active');
+
+                // Hide all menus
+                menus.forEach(function (menu) {
+                    menu.style.display = 'none';
+                });
+
+                // Show the target menu
+                document.getElementById(target).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

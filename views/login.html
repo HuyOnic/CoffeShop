@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Đăng nhập</title>
+    <link rel="stylesheet" type="text/css" href="/styles/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Đăng nhập</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <div id="error"></div>
+    </div>
+
+    <script src="/scripts/login.js"></script>
+</body>
+
+</html>

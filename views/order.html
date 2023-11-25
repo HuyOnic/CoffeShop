@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đơn Hàng</title>
+    <link rel="stylesheet" href="/styles/base.css" class="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/container.css" class="">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/customer.css">
+    <link rel="stylesheet" href="/styles/customer/order.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+    <link rel="stylesheet" href="/styles/customer/notification.css">
+</head>
+
+<body>
+    <div class="grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo__img" src="/assets/images/logo.png" alt="logo">
+                </div>
+
+                <div class="service">
+                    <a href="/views/customer.html" class="service__home">
+                        <i class="service__home--icon fa-solid fa-house"></i>
+                        <p class="service_home--text">Trang chủ</p>
+                    </a>
+                    <div class="service_intro">
+                        <i class="service__intro--icon fa-solid fa-exclamation"></i>
+                        <p class="service__intro--text">Giới thiệu</p>
+                    </div>
+                    <div id="logout" class="service__signup">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                        <p class="service__signup--text">Đăng xuất</p>
+                    </div>
+                    <div class="view-profile service__signup">
+                        <i class="service__signup--icon fa-solid fa-user"></i>
+                        <p class="service__signup--text">Đức Huy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <i class="search__box--icon fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Tìm kiếm sản phẩm" type="text" class="search__box--input">
+            </div>
+        </header>
+        <ul class="customer__function--list">
+            <li class="customer__function--item">
+                <a href="#" class="menu-link active" data-target="waiting-order">
+                    <i class="customer__function--icon fa-solid fa-check-to-slot"></i>
+                    <h3 class="customer__function--title">Chờ được xác nhận</h3>
+                </a>
+            </li>
+            <li class="customer__function--item">
+                <a href="#" class="menu-link" data-target="preparing-order">
+                    <i class="customer__function--icon fa-solid fa-mug-hot"></i>
+                    <h3 class="customer__function--title">Đang chuẩn bị</h3>
+                </a>
+            </li>
+            <li class="customer__function--item">
+                <a href="#" class="menu-link" data-target="shiping-order">
+                    <i class="customer__function--icon fa-solid fa-truck"></i>
+                    <h3 class="customer__function--title">Đang giao hàng</h3>
+                </a>
+            </li>
+
+            <li class="customer__function--item">
+                <a href="#" class="menu-link" data-target="shiped-order">
+                    <i class="customer__function--icon fa-solid fa-table"></i>
+                    <h3 class="customer__function--title">Lịch sử đơn hàng</h3>
+                </a>
+            </li>
+        </ul>
+
+        <div class="order__fn">
+            <!-- Waiting Confirm -->
+            <h3 class="order__title">DANH SÁCH ĐƠN HÀNG</h3>
+            <ul id="waiting-order" class="order__listt menu-target">
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 23231232</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Hình thức thanh toán:</p>
+                        <p class="red">Chuyển khoản</p>
+                    </div>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="red">Đang chờ xác nhận</p>
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 20.000 đ</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                    <button class="btn--delete">Hủy đơn hàng</button>
+                </li>
+
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 1231032</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Hình thức thanh toán:</p>
+                        <p class="green">Thanh toán khi nhận hàng</p>
+                    </div>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="red">Đang chờ xác nhận</p>
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                    <button class="btn--delete">Hủy đơn hàng</button>
+                </li>
+            </ul>
+            <!-- Preparing -->
+            <ul id="preparing-order" class="order__list menu-target">
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 582032</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Hình thức thanh toán:</p>
+                        <p class="red">Chuyển khoản</p>
+                    </div>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="red">Đang chuẩn bị</p>
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                    <button class="btn--delete">Hủy đơn hàng</button>
+                </li>
+            </ul>
+            <!-- Shiping -->
+            <ul id="shiping-order" class="order__list menu-target order-preparing">
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 981032</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="blue">Đang giao hàng</p>
+
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 20.000 đ</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Success -->
+            <ul id="shiped-order" class="order__list menu-target order-preparing">
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 231032</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="green">Giao hàng thành công</p>
+
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 2</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="order__item">
+                    <p class="order__text">Mã đơn hàng: 231032</p>
+                    <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                    <p class="order__text">Mã khách hàng: 122</p>
+                    <div class="order__text">
+                        <p class="order__text">Trạng thái đơn hàng:</p>
+                        <p class="red">Giao hàng thất bại</p>
+
+                    </div>
+                    <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                    <p class="order__text">Tổng giá tiền: 2</p>
+                    <p class="order__text">Danh sách sản phẩm:</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                        <li class="cart__item">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="order__text">Coffe Mocha</p>
+                            <p class="order__text">Ít đá, Ít đường</p>
+                            <p class="order__text">20.000 đ</p>
+                            <p class="order__text">Số lượng: 2</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script src="/scripts/order.js"></script>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">VỀ CHÚNG TÔI</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Di sản</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Công ty</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">DỊCH VỤ KHÁCH HÀNG</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Câu hỏi thường gặp</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Hotline</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN KẾT NHANH</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Dịch vụ cửa hàng</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Dành cho đối tác</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN HỆ</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. GOOGLE</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. FACEBOOK</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">3. GMAIL</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">4. Địa chỉ: 55 Giải Phóng, Đồng Tâm, Hai Bà Trung, Hà
+                        Nội</a>
+                </li>
+
+            </ul>
+        </footer>
+        <!-- PROFILE -->
+        <div class="profile">
+            <form class="profile__form">
+                <h3 class="profile__title">Thông tin người dùng</h3>
+                <i class="profile__user--icon fa-solid fa-user"></i>
+                <p class="profile__user--name">Đào Đức Huy</p>
+                <ul class="profile__list">
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên người dùng:</p>
+                        <p class="profile__item--info">Đào Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ email:</p>
+                        <p class="profile__item--info">huy0215066@huce.edu.vn</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ người dùng:</p>
+                        <p class="profile__item--info">Không có</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Số điện thoại:</p>
+                        <p class="profile__item--info">0912345678</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Quyền người dùng:</p>
+                        <p class="profile__item--info">Quản lý</p>
+                    </li>
+                </ul>
+                <div class="profile__function">
+                    <button class="btn--logout">Đăng xuất</button>
+                    <button class="btn--change-password">Đổi Mật Khẩu</button>
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="profile-exit btn--exit">Thoát</button>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/profile.js"></script>
+    </div>
+
+</body>
+
+</html>

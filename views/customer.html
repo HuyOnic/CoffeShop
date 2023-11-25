@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Trang chủ cửa hàng cà phê sách</title>
+    <link rel="stylesheet" href="/styles/base.css" class="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/container.css" class="">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/customer.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+    <link rel="stylesheet" href="/styles/customer/notification.css">
+    <link rel="stylesheet" href="/styles/showitem.css">
+    <link rel="stylesheet" href="/styles/premium.css">
+    <link rel="stylesheet" href="/styles/showbook.css">
+</head>
+
+<body>
+    <!-- APP -->
+    <div class="app grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo__img" src="/assets/images/logo.png" alt="logo">
+                </div>
+
+                <div class="service">
+                    <div class="service__home">
+                        <i class="service__home--icon fa-solid fa-house"></i>
+                        <p class="service_home--text">Trang chủ</p>
+                    </div>
+                    <div class="service_intro">
+                        <i class="service__intro--icon fa-solid fa-exclamation"></i>
+                        <p class="service__intro--text">Giới thiệu</p>
+                    </div>
+                    <div id="logout" class="service__signup">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                        <p class="service__signup--text">Đăng xuất</p>
+                    </div>
+                    <script src="/scripts/logout.js"></script>
+                    <div class="view-profile service__signup">
+                        <i class="service__signup--icon fa-solid fa-user"></i>
+                        <p class="service__signup--text">Đức Huy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <i class="search__box--icon fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Tìm kiếm sản phẩm" type="text" class="search__box--input">
+            </div>
+        </header>
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="slide1" style="background-image: url('/assets/images/slider1.jpg');">Book Coffe Shop</div>
+            <div class="slide2" style="background-image: url('/assets/images/slider2.jpg');">66CS2 - Nhóm 1</div>
+            <div class="slide3" style="background-image: url('/assets/images/slider3.jpg');"> Đồ án Công Nghệ Phần Mềm
+            </div>
+
+        </div>
+        <!-- CONTAINER -->
+        <ul class="customer__function--list">
+            <li class="customer__function--item">
+                <a href="/views/order.html" class="customer__function--link">
+                    <i class="customer__function--icon fa-solid fa-box"></i>
+                </a>
+                <h3 class="customer__function--title">Đơn hàng</h3>
+            </li>
+            <li class="customer__function--item">
+                <i class="customer__function--icon fa-solid fa-star"></i>
+                <h3 class="customer__function--title">Đánh giá</h3>
+            </li>
+            <li class="note-icon customer__function--item">
+                <i class="customer__function--icon fa-solid fa-bell"></i>
+                <h3 class="customer__function--title">Thông báo</h3>
+                <div class="note">
+                    <p class="note__title">Thông báo</p>
+                    <ul class="note__list">
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li class="cart-icon customer__function--item">
+                <a href="/views/cart.html" class="customer__function--link">
+                    <i class="customer__function--icon fa-solid fa-cart-shopping"></i>
+                </a>
+                <h3 class="customer__function--title">Giỏ hàng</h3>
+                <!-- show cart -->
+                <div class="cart">
+                    <p class="cart__title">Giỏ hàng</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <button id="cart-order" class="btn--add">Đặt hàng</button>
+                </div>
+                <script src="/scripts/cart.js"></script>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu--item menu-option select">
+                <h3 class="menu--title">MENU</h3>
+            </li>
+            <li class="menu--item book-option">
+                <h3 class="menu--title">SÁCH</h3>
+            </li>
+        </ul>
+        <div class="container">
+            <h2 class="container__category">
+                Đồ uống
+            </h2>
+            <ul class="product__list">
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/latte.jpg" alt="" class="view__item coffe__item--img ">
+                    <h3 class="coffe__item--name">Caffe Vàng</h3>
+                    <p class="coffe__item--price">30.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/coffemocha.jpeg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Mocha</h3>
+                    <p class="coffe__item--price">40.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/glace.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Nâu</h3>
+                    <p class="coffe__item--price">20.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/black.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Mocha Premium</h3>
+                    <p class="coffe__item--price">50.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/mochacip.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Bọt</h3>
+                    <p class="coffe__item--price">30.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/normal.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Đá Đen</h3>
+                    <p class="coffe__item--price">20.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/muoi.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Huy</h3>
+                    <p class="coffe__item--price">20.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/cream.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Kem</h3>
+                    <p class="coffe__item--price">40.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/capuchino.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Capuchino</h3>
+                    <p class="coffe__item--price">30.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/carament.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Caffe Bánh</h3>
+                    <p class="coffe__item--price">40.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+                <button class="btn--add">Xem thêm</button>
+
+
+            </ul>
+            <h2 class="container__category">
+                Món ăn
+            </h2>
+            <ul class="product__list">
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/banhmi.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Bánh mì xá xíu</h3>
+                    <p class="coffe__item--price">20.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/noodles.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Mì Mug Nessin</h3>
+                    <p class="coffe__item--price">30.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/banhquy.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Bánh Rán</h3>
+                    <p class="coffe__item--price">10.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/banhngot.jpeg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Bánh ngọt</h3>
+                    <p class="coffe__item--price">10.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/beefsteak.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Bít Tết</h3>
+                    <p class="coffe__item--price">200.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/fish.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Cá Rán</h3>
+                    <p class="coffe__item--price">100.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/fastfood.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Combo Đồ ăn</h3>
+                    <p class="coffe__item--price">100.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/RoastPork.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Lợn quay</h3>
+                    <p class="coffe__item--price">200.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/menu/trungbanh.jpg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Bánh mì trứng</h3>
+                    <p class="coffe__item--price">12.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/spagetti.jpeg" alt="" class="coffe__item--img view__item">
+                    <h3 class="coffe__item--name">Mì Ý</h3>
+                    <p class="coffe__item--price">10.000 đ</p>
+                    <button class="product__button">Thêm vào giỏ hàng</button>
+                </li>
+                <button class="btn--add">Xem thêm</button>
+
+            </ul>
+
+        </div>
+        <!-- BOOKS -->
+        <div class="book">
+            <h2 class="container__category">
+                Sách Khoa Học
+            </h2>
+            <ul class="product__list">
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/machinelearning.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Machine Learning Yearning</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/deeplearning.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Deep Learning Ian</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/cv.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Morden Computer Vision</h3>
+                    <p class="coffe__item--price">Mã sách: 1332</p>
+                    <button class="btn--delete view-premium">Đã mượn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/datascience.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Practical Statistics for DS</h3>
+                    <p class="coffe__item--price">Mã sách: 1002</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/tensorflow.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Tensorflow 2 Pocket Reference</h3>
+                    <p class="coffe__item--price">Mã sách: 802</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/sklearn.jpeg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Sklearn Machine Learning</h3>
+                    <p class="coffe__item--price">Mã sách: 2902</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/csharp.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">C#</h3>
+                    <p class="coffe__item--price">Mã sách: 1129</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/java.jpeg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Learning Java</h3>
+                    <p class="coffe__item--price">Mã sách: 1332</p>
+                    <button class="btn--exit view-premium view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/keras.jpeg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">DL with Tensorflow and Keras</h3>
+                    <p class="coffe__item--price">Mã sách: 1002</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/pytorch.png" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Pytorch for Deeplearning</h3>
+                    <p class="coffe__item--price">Mã sách: 8802</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+                <button class="btn--add">Xem thêm</button>
+
+            </ul>
+            <h2 class="container__category">
+                Tiểu thuyết
+            </h2>
+            <ul class="product__list">
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/tamquoc.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Machine Learning Yearning</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/thuyhu.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Deep Learning Ian</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/honglau.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Morden Computer Vision</h3>
+                    <p class="coffe__item--price">Mã sách: 1332</p>
+                    <button class="btn--delete">Đã mượn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hanso.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Practical Statistics for DS</h3>
+                    <p class="coffe__item--price">Mã sách: 1002</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/taydu.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Tensorflow 2 Pocket Reference</h3>
+                    <p class="coffe__item--price">Mã sách: 802</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hptap1.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Machine Learning Yearning</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hptap2.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Deep Learning Ian</h3>
+                    <p class="coffe__item--price">Mã sách: 1302</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hptap3.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Morden Computer Vision</h3>
+                    <p class="coffe__item--price">Mã sách: 1332</p>
+                    <button class="btn--delete">Đã mượn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hptap6.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Practical Statistics for DS</h3>
+                    <p class="coffe__item--price">Mã sách: 1002</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+
+                <li class="product__item containter__coffe--item">
+                    <img src="/assets/images/books/hptap5.jpg" alt="" class="coffe__item--img view__book">
+                    <h3 class="coffe__item--name">Tensorflow 2 Pocket Reference</h3>
+                    <p class="coffe__item--price">Mã sách: 802</p>
+                    <button class="product__button view-premium">Đang còn</button>
+                </li>
+                <button class="btn--add">Xem thêm</button>
+
+            </ul>
+
+        </div>
+        <script src="/scripts/container.js"></script>
+
+
+        <!-- INTRODUCTION TO PREMIUM -->
+        <div class="intro__premium--frame">
+            <form action="" class="intro__premium--form">
+                <h3 class="intro__premium--title">HÃY TRỞ THÀNH HỘI VIÊN CÙNG CHÚNG TÔI!</h3>
+                <p class="intro__premium--text">Chỉ hội viên mới có thể mượn sách!</p>
+                <p class="intro__premium--text">Các đặc quyền khi trở thành hội viên:</p>
+                <p class="intro__premium--text">+ Bạn có thể mượn sách, tối đa lên đến 3 cuốn cùng một lúc</p>
+                <p class="intro__premium--text">+ Được nhận các phiếu ưu đãi của cửa hàng</p>
+                <p class="intro__premium--text">+ Giảm ngay 20% khi gọi đồ uống (một lần mỗi tháng)</p>
+                <p class="intro__premium--title">CÒN CHẦN CHỜ GÌ NỮA MÀ KHÔNG MAU ĐĂNG KÝ!</p>
+                <p class="intro__premium--text">Cách thức đăng ký:</p>
+                <p class="intro__premium--text">Bước 1: Khách hàng đến địa chỉ của cửa hàng: 55 Giải Phóng, Đồng Tâm,
+                    Hai Bà Trưng, Hà Nội.</p>
+                <p class="intro__premium--text">Bước 2: Gặp nhân viên cửa hàng, cung cấp thông tin</p>
+                <p class="intro__premium--text">Bước 3: Thực hiện nạp gói hội viên và nhận ưu đãi.</p>
+                <h3 class="intro__premium--title">Các gói hội viên của cửa hàng</h3>
+                <ul class="intro__premium--list">
+                    <li class="intro__premium--item">
+                        <p class="intro__premium--text">Gói 1 tháng: </p>
+                        <p class="intro__premium--text">199.000 đ</p>
+                    </li>
+
+                    <li class="intro__premium--item">
+                        <p class="intro__premium--text">Gói 6 tháng: </p>
+                        <p class="intro__premium--text">299.000 đ</p>
+                    </li>
+
+                    <li class="intro__premium--item">
+                        <p class="intro__premium--text">Gói 1 năm: </p>
+                        <p class="intro__premium--text">399.000 đ</p>
+                    </li>
+                </ul>
+
+                <img src="/assets/images/intro/bean.png" alt="" class="intro__premium--img intro__premium--o">
+                <img src="/assets/images/intro/bg.png" alt="" class="intro__premium--img intro__premium--t">
+                <img src="/assets/images/intro/bg.png" alt="" class="intro__premium--img intro__premium--th">
+                <img src="/assets/images/intro/bg.png" alt="" class="intro__premium--img intro__premium--f">
+                <img src="/assets/backgrounds/star1.png" alt="" class="intro__premium--img intro__premium--f">
+
+            </form>
+        </div>
+        <script src="/scripts/showpremium.js"></script>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">VỀ CHÚNG TÔI</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Di sản</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Công ty</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">DỊCH VỤ KHÁCH HÀNG</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Câu hỏi thường gặp</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Hotline</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN KẾT NHANH</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Dịch vụ cửa hàng</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Dành cho đối tác</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN HỆ</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. GOOGLE</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. FACEBOOK</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">3. GMAIL</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">4. Địa chỉ: 55 Giải Phóng, Đồng Tâm, Hai Bà Trung, Hà
+                        Nội</a>
+                </li>
+
+            </ul>
+        </footer>
+        <!-- PROFILE -->
+        <div class="profile">
+            <form class="profile__form">
+                <h3 class="profile__title">Thông tin người dùng</h3>
+                <i class="profile__user--icon fa-solid fa-user"></i>
+                <p class="profile__user--name">Đào Đức Huy</p>
+                <ul class="profile__list">
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên người dùng:</p>
+                        <p class="profile__item--info">Đào Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ email:</p>
+                        <p class="profile__item--info">huy0215066@huce.edu.vn</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ người dùng:</p>
+                        <p class="profile__item--info">Chưa nhập</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Số điện thoại:</p>
+                        <p class="profile__item--info">0912345678</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Quyền người dùng:</p>
+                        <p class="profile__item--info">Khách hàng</p>
+                    </li>
+                </ul>
+                <div class="profile__function">
+                    <button style="width: 100px;" class="btn--delete">
+                        <a style="color: var(--white-color);" href="index.html" class="">
+                            Đăng xuất
+                        </a>
+                    </button>
+                    <button class="btn--change-password">Đổi Mật Khẩu</button>
+                    <button style="width: 100px;" class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button style="width: 100px;" class="profile-exit btn--exit">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/profile.js"></script>
+
+        <!-- SHOW Item -->
+        <div class="show__item">
+            <form action="" class="form__item">
+                <div class="form__img">
+                    <img src="/assets/images/coffemocha.jpeg" alt="" class="form__item--img">
+                </div>
+                <div class="ul form__item--info">
+                    <h3 class="form__item--name">Cà phê</h3>
+                    <p class="form__item--text">Mô tả: Cà phê là món thức uống gần như mỗi ngày của thế giới. Người uống
+                        vì cần sự tỉnh táo cho ngày mới. Người thưởng thức vì yêu thích hương vị tuyệt vời của nó. Có
+                        người chỉ uống vì một thói quen đơn giản.</p>
+                    <p class="form__item--text">Tùy chọn size: </p>
+                    <ul class="size__list">
+                        <li class="size__item">M</li>
+                        <li class="size__item">L</li>
+                        <li class="size__item">XL</li>
+                    </ul>
+                    <p class="form__item--text">Gía tiền: 20.000 đ</p>
+                    <button class="btn--add">Thêm vào giỏ hàng</button>
+                </div>
+
+                <div class="form__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showitem.js"></script>
+
+        <!-- SHOW BOOK -->
+        <div class="show__book">
+            <form action="" class="form__book">
+                <div class="form__img">
+                    <img src="" alt="" class="form__book--img">
+                </div>
+                <div class="ul form__book--info">
+                    <h3 class="form__book--name">MACHINE LEARNING YEARNING</h3>
+                    <p class="form__book--text">Mã sách: 12938123</p>
+                    <p class="form__book--text">Tên tác giả: AndrewNg</p>
+                    <p class="form__book--text">Thể loại: Science</p>
+                    <p class="form__book--descibe">Học Máy là nền tảng cho hàng loạt ứng dụng quan trọng như tìm kiếm
+                        trang web,
+                        lọc thư điện tử spam, nhận dạng giọng nói, gợi ý sản phẩm, và nhiều ứng dụng khác
+                        nữa. Nếu bạn cùng các thành viên trong nhóm đang làm một dự án học máy và rất
+                        muốn tiến triển nhanh chóng, thì quyển sách này là dành cho bạn.</p>
+                    <p class="form__book--text">Trạng thái:</p>
+                    <button class="btn--add">Đang còn</button>
+                </div>
+
+                <div class="book__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showbook.js"></script>
+        <script src="/scripts/quit.js"></script>
+    </div>
+
+</body>
+
+</html>

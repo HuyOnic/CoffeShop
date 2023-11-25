@@ -1,0 +1,14 @@
+.manage__menu {
+    width: 100%;
+    padding: 20px;
+    display: none;
+}
+
+.manage__frame {
+    width: 100px;
+    height: 100px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

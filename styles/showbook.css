@@ -1,0 +1,112 @@
+.show__book {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 100;
+}
+
+.form__book {
+    margin: auto;
+    margin-top: 1400px;
+    background-image: url(/assets/images/books/bgbooks.jpg);
+    width: 1000px;
+    display: flex;
+    padding: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    border: 6px solid var(--white-color);
+    animation: Grow .2s ease-in-out;
+
+}
+
+
+@keyframes BOOK {
+    from {
+        transform: rotate(-100deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.form__book--img {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid var(--black-color);
+}
+
+.form__book--info {
+    padding: 20px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.form__book--name {
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px var(--primary-color);
+
+}
+
+.form__book--text {
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 10px;
+    text-shadow: 2px 2px 2px var(--primary-color);
+}
+
+.form__book--descibe {
+    color: var(--white-color);
+    font-weight: bold;
+    margin: 10px;
+    overflow: scroll;
+    max-height: 140px;
+}
+
+.size__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.size__book {
+    width: 60px;
+    padding: 10px;
+    color: var(--black-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.size__book:hover {
+    background-color: var(--button-color);
+}
+
+.book__cancel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--quit-color);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form__cancel:hover {
+    opacity: .7;
+}

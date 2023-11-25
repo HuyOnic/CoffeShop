@@ -1,0 +1,29 @@
+.customer__function--list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    background-color: var(--black-color);
+    border-bottom: 2px solid var(--white-color);
+}
+
+.customer__function--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.customer__function--icon:hover {
+    opacity: .7;
+}
+
+.customer__function--icon {
+    color: var(--white-color);
+    font-size: 4rem;
+}
+
+.customer__function--title {
+    color: var(--white-color);
+    font-size: 1.4rem;
+}

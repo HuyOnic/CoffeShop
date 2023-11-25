@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang giỏ hàng</title>
+    <link rel="stylesheet" href="/styles/base.css" class="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/container.css" class="">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/signup.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/customer.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+    <link rel="stylesheet" href="/styles/customer/notification.css">
+</head>
+
+<body>
+    <!-- show cart -->
+    <div class="app grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo__img" src="/assets/images/logo.png" alt="logo">
+                </div>
+
+                <div class="service">
+                    <div class="service__home">
+                        <i class="service__home--icon fa-solid fa-house"></i>
+                        <p class="service_home--text">Trang chủ</p>
+                    </div>
+                    <div class="service_intro">
+                        <i class="service__intro--icon fa-solid fa-exclamation"></i>
+                        <p class="service__intro--text">Giới thiệu</p>
+                    </div>
+                    <div id="logout" class="service__signup">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                        <p class="service__signup--text">Đăng xuất</p>
+                    </div>
+                    <script src="/scripts/logout.js"></script>
+                    <div class="view-profile service__signup">
+                        <i class="service__signup--icon fa-solid fa-user"></i>
+                        <p class="service__signup--text">Đức Huy</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <i class="search__box--icon fa-solid fa-magnifying-glass"></i>
+                <input placeholder="Tìm kiếm sản phẩm" type="text" class="search__box--input">
+            </div>
+        </header>
+        <!-- SLIDER -->
+        <div class="slider">
+            <div class="slide1" style="background-image: url('/assets/images/slider1.jpg');"></div>
+            <div class="slide2" style="background-image: url('/assets/images/slider2.jpg');"></div>
+            <div class="slide2" style="background-image: url('/assets/images/slider3.jpg');"></div>
+        </div>
+        <!-- CONTAINER -->
+        <ul class="customer__function--list">
+            <li class="customer__function--item">
+                <a href="/views/order.html" class="customer__function--link">
+                    <i class="customer__function--icon fa-solid fa-box"></i>
+                </a>
+                <h3 class="customer__function--title">Đặt hàng</h3>
+            </li>
+            <li class="customer__function--item">
+                <i class="customer__function--icon fa-solid fa-star"></i>
+                <h3 class="customer__function--title">Đánh giá</h3>
+            </li>
+            <li class="note-icon customer__function--item">
+                <i class="customer__function--icon fa-solid fa-bell"></i>
+                <h3 class="customer__function--title">Thông báo</h3>
+                <div class="note">
+                    <p class="note__title">Thông báo</p>
+                    <ul class="note__list">
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+
+                        <li class="note__item">
+                            <p class="note__text">Đơn hàng mã 12423948 đã được giao thành công</p>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li class="cart-icon customer__function--item">
+                <a href="/views/cart.html" class="customer__function--link">
+                    <i class="customer__function--icon fa-solid fa-cart-shopping"></i>
+                </a>
+                <h3 class="customer__function--title">Giỏ hàng</h3>
+                <!-- show cart -->
+                <div class="cart">
+                    <p class="cart__title">Giỏ hàng</p>
+                    <ul class="cart__list">
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                        <li class="cart__item">
+                            <input type="checkbox" class="cart__select" checked="checked">
+                            <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                            <p class="cart__text">Coffe Mocha</p>
+                            <p class="cart__text">Ít đá, Ít đường</p>
+                            <p class="cart__text">20.000 đ</p>
+                            <input type="number" class="cart__text" value="1">
+                            <button class="btn--edit">
+                                <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn--delete">
+                                <i class="btn--icon fa-solid fa-trash"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <button id="cart-order" class="btn--add">Đặt hàng</button>
+                </div>
+                <script src="/scripts/cart.js"></script>
+            </li>
+        </ul>
+        <div class="cart-page">
+            <h3 class="cart__label">Đơn hàng</h3>
+            <ul class="cart__list">
+                <li class="cart__item">
+                    <input type="checkbox" class="cart__select" checked="checked">
+                    <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                    <p class="cart__text">Coffe Mocha</p>
+                    <p class="cart__text">Ít đá, Ít đường</p>
+                    <p class="cart__text">20.000 đ</p>
+                    <input type="number" class="cart__text" value="1">
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn--delete">
+                        <i class="btn--icon fa-solid fa-trash"></i>
+                    </button>
+                </li>
+                <li class="cart__item">
+                    <input type="checkbox" class="cart__select" checked="checked">
+                    <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                    <p class="cart__text">Coffe Mocha</p>
+                    <p class="cart__text">Ít đá, Ít đường</p>
+                    <p class="cart__text">20.000 đ</p>
+                    <input type="number" class="cart__text" value="1">
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn--delete">
+                        <i class="btn--icon fa-solid fa-trash"></i>
+                    </button>
+                </li>
+                <li class="cart__item">
+                    <input type="checkbox" class="cart__select" checked="checked">
+                    <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                    <p class="cart__text">Coffe Mocha</p>
+                    <p class="cart__text">Ít đá, Ít đường</p>
+                    <p class="cart__text">20.000 đ</p>
+                    <input type="number" class="cart__text" value="1">
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn--delete">
+                        <i class="btn--icon fa-solid fa-trash"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="buy__order">
+                <p class="payment__label">Số lượng sản phẩm: 3</p>
+                <p class="payment__label">Tổng giá tiền: 60.000 đ</p>
+                <div class="buy__payment">
+                    <label for="payment" class="payment__label">Lựa chọn phương thức thanh toán</label>
+                    <select name="payment" id="payment" class="select__payment">
+                        <option value="Thanh toán khi nhận hàng" class="option_payment">Thanh toán khi nhận hàng
+                        </option>
+                        <option value="Thanh toán chuyển khoản" class="option_payment">Thanh toán chuyển khoản</option>
+                    </select>
+                </div>
+                <button id="pay" class="btn-order btn--add">Đặt hàng</button>
+            </div>
+        </div>
+        <script src="/scripts/cart.js"></script>
+
+        <!-- CHUYEN KHOAN -->
+        <div class="show__payment">
+            <form action="" class="show__form">
+                <img class="show__QR" src="/assets/images/payment.jpeg" alt="QR">
+                <div class="confirm__payment">
+                    <button id="reject-pay" class="show__btn btn--logout">Từ chối thanh toán</button>
+                    <button id="confirm-pay" class="show__btn btn--add">Xác nhận thanh toán</button>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/buy.js"></script>
+    </div>
+</body>
+
+</html>

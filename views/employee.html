@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản lý cửa hàng</title>
+    <link rel="stylesheet" href="/styles/base.css" class="">
+    <link rel="stylesheet" href="/styles/header.css" class="">
+    <link rel="stylesheet" href="/styles/manager.css">
+    <link rel="stylesheet" href="/styles/managements/books.css">
+    <link rel="stylesheet" href="/styles/managements/menu.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/customer/order.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+    <link rel="stylesheet" href="/styles/container.css">
+    <link rel="stylesheet" href="/styles/customer.css">
+    <link rel="stylesheet" href="/styles/bill.css">
+    <link rel="stylesheet" href="/styles/showitem.css">
+    <link rel="stylesheet" href="/styles/showbook.css">
+    <link rel="stylesheet" href="/styles/employee/employee.css">
+    <link rel="stylesheet" href="/styles/customer/cart.css">
+
+</head>
+
+<body>
+    <div class="app grid">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo__img" src="/assets/images/logo.png" alt="logo">
+                </div>
+
+                <div class="service">
+                    <div class="service__home">
+                        <i class="service__home--icon fa-solid fa-house"></i>
+                        <p class="service_home--text">Trang chủ</p>
+                    </div>
+                    <div class="service_intro">
+                        <i class="service__intro--icon fa-solid fa-exclamation"></i>
+                        <p class="service__intro--text">Giới thiệu</p>
+                    </div>
+                    <div class="service__login">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                        <a href="index.html" class="service__login--text">Đăng xuất</a>
+                    </div>
+                    <div class="view-profile service__signup">
+                        <i class="service__signup--icon fa-solid fa-user"></i>
+                        <p class="service__signup--text">Đức Huy</p>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="manager">
+            <!-- FUNCTION -->
+            <i class="btn_nav function__icon fa-solid fa-bars"></i>
+            <div class="fn_nav function">
+                <ul class="function__list">
+                    <a href="#" data-target="guild" class="using bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-question"></i>
+                        <p class="function__item--name">Giới thiệu</p>
+                    </a>
+                    <a href="#" data-target="employee-notication" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-bell"></i>
+                        <p class="function__item--name">Thông Báo</p>
+                    </a>
+                    <a href="#" data-target="employee-onlorder" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-blog"></i>
+                        <p class="function__item--name">Xử lý đơn hàng Online</p>
+                    </a>
+                    <a href="#" data-target="employee-bill" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-coins"></i>
+                        <p class="function__item--name">Xử lý đơn hàng Tại Quầy</p>
+                    </a>
+                    <a href="#" data-target="employee-borrow-book" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-book"></i>
+                        <p class="function__item--name">Xử lý Mượn Sách</p>
+                    </a>
+                    <a href="#" data-target="manage-book" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-book-open-reader"></i>
+                        <p class="function__item--name">Tra Cứu Sách</p>
+                    </a>
+
+
+                    <a href="#" data-target="signup-premium" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-crown"></i>
+                        <p class="function__item--name">Đăng ký hội viên cho khách</p>
+                    </a>
+                    <a href="#" data-target="extend-premium" class="bar-link function__item">
+                        <i class="function__item--icon fa-solid fa-clock"></i>
+                        <p class="function__item--name">Gia hạn hội viên</p>
+                    </a>
+
+                </ul>
+            </div>
+            <div style="width:100%;" class="">
+                <!-- GUILD -->
+                <div id="guild" class="using bar-target guild">
+                    <div class="guilbg">
+                        <div class="guild-left">
+                            <img class="guild-img" src="/assets/images/intro/bg.png" alt="">
+                            <img class="guild-img" src="/assets/images/intro/coffe.png" alt="">
+                            <!-- <img class="guild-img" src="/assets/images/intro/coffe.png" alt=""> -->
+                        </div>
+                        <div class="guild-content">
+                            <h3 class="guild--title">
+                                CHÀO MỪNG ĐẾN VỚI CỬA HÀNG CÀ PHÊ SÁCH
+                            </h3>
+                            <p class="guild--text">
+
+                                Chào mừng đến với Cửa hàng Cà phê Sách của chúng tôi! Đây là nơi tuyệt vời để bạn thả
+                                mình vào thế giới hưởng ứng cùng vị ngọt của cà phê và những câu chuyện thú vị từ sách.
+                            </p>
+
+                            <p class="guild--text">
+                                Tại cửa hàng của chúng tôi, bạn có thể tận hưởng không gian ấm cúng, với mùi hương cà
+                                phê phảng phất và hài hòa. Chúng tôi sẽ cung cấp cho bạn những ly cà phê tuyệt vời có
+                                mùi hương và hương vị tuyệt đỉnh, từ những hạt cà phê chọn lọc kỹ càng.
+                            </p>
+
+                            <p class="guild--text">
+                                Ngoài cà phê thơm ngon, chúng tôi cũng có một bộ sưu tập sách phong phú đa dạng từ các
+                                thể loại, bao gồm tiểu thuyết, kinh tế, khoa học, lịch sử và hơn thế nữa. Bạn có thể
+                                ngồi thư giãn trong không gian yên bình của cửa hàng của chúng tôi, đọc sách mới hoặc
+                                tìm kiếm những tác phẩm kinh điển được yêu thích.
+                            </p>
+
+                            <p class="guild--text">
+                                Đội ngũ chúng tôi toàn bộ là những người đam mê văn hóa đọc, chúng tôi rất sẵn lòng giới
+                                thiệu cho bạn những cuốn sách hấp dẫn, cũng như chia sẻ kinh nghiệm và gợi ý về cà phê
+                                ngon. Chúng tôi cam kết tạo ra một trải nghiệm đáng nhớ, mang đến sự hài lòng cho mỗi
+                                khách hàng.
+                            </p>
+
+                            <p class="guild--text">
+                                Vậy nên, hãy đến và thử cảm nhận nhé! Chúng tôi rất mong được đón tiếp bạn tại Cửa hàng
+                                Cà phê Sách của chúng tôi. Hãy đắm chìm trong không gian thoải mái và thưởng thức những
+                                món cà phê thượng hạng cùng những tác phẩm văn học đáng kinh ngạc.
+                            </p>
+                        </div>
+                        <div class="guild-right">
+                            <!-- <img class="guild-img" src="/assets/images/intro/bean.png" alt=""> -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- BOOK MANAGEMENT FUNCTION -->
+                <div id="manage-book" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">TRA CỨU LÝ SÁCH</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm sách" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Hình ảnh</p>
+                                <p class="manage__book--name">ID sách</p>
+                                <p class="manage__book--name">Tên sách</p>
+                                <p class="manage__book--name">Mô tả về sách</p>
+                                <p class="manage__book--name">Thể loại</p>
+                                <p class="manage__book--name">Trạng thái</p>
+                                <p class="manage__book--name">Vị Trí</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/demen.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">1007878</p>
+                                <p class="manage__book--name">Dế mèn phiêu lưu ký</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Tô Hoài</p>
+                                <p class="manage__book--name">Fiction</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/machinelearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">1287491</p>
+                                <p class="manage__book--name">Machine Learning Yearning</p>
+                                <p class="manage__book--name">Mô tả về sách: Cuốn sách được viết bởi AndrewNg</p>
+                                <p class="manage__book--name">Science</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/datascience.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">108280</p>
+                                <p class="manage__book--name">Practical Data Science</p>
+                                <p class="manage__book--name">Mô tả về sách: Giới thiệu cho người nhập môn các khái niệm
+                                    trong DS</p>
+                                <p class="manage__book--name">Science</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/deeplearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">423100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Goodfellơ, Yóua Bengio</p>
+                                <p class="manage__book--name">Science</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/tensorflow.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">4237100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: O'Reilli Tensorflow 2 là một cẩm nang về
+                                    tất cả các khái niệm, cách sử dụng framework tesorflow</p>
+                                <p class="manage__book--name">Science</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/books/deeplearning.jpg" alt="ảnh sách"
+                                    class="view__book manage__book--img">
+                                <p class="manage__book--name">123100</p>
+                                <p class="manage__book--name">Deep Learning Ian Goodfellow</p>
+                                <p class="manage__book--name">Mô tả về sách: Tác giả Goodfellơ, Yóua Bengio</p>
+                                <p class="manage__book--name">Science</p>
+                                <p class="manage__book--name">Đang còn</p>
+                                <p class="manage__book--name">A-02-23</p>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- MENU MANAGEMENT FUNCTION -->
+                <div id="manage-menu" class="bar-target manage__menu">
+                    <form class="manage__book--form">
+                        <h3 class="manage__book--title">QUẢN LÝ MENU</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-magnifying-glass"></i>
+                            <input placeholder="Tìm kiếm menu" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <ul class="manage__book--list">
+                            <li class="manage__book--item">
+                                <p class="manage__book--name">Hình ảnh</p>
+                                <p class="manage__book--name">ID</p>
+                                <p class="manage__book--name">Tên món</p>
+                                <p class="manage__book--name">Mô tả về món</p>
+                                <p class="manage__menu--name">Giá cả</p>
+                                <p class="manage__book--name">Chỉnh sửa</p>
+                                <p class="manage__book--name">Xóa</p>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/menu/latte.jpg" alt="ảnh sách"
+                                    class="view__item manage__book--img manage__frame">
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/glace.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/black.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/coffe.jpg" alt="ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/capuchino.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/mochacip.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/normal.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/capuchino.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/muoi.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/noodles.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <div class="manage__frame">
+                                    <img src="/assets/images/menu/beefsteak.jpg" alt=" ảnh sách"
+                                        class="view__item manage__book--img manage__frame">
+                                </div>
+                                <p class="manage__book--name">10000</p>
+                                <p class="manage__book--name">Coffe</p>
+                                <p class="manage__book--name">Mô tả về món: Món ngon </p>
+                                <p class="manage__menu--name">20.000 đ</p>
+                                <button class="btn--edit">
+                                    <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--after">
+                                <i class="btn--number fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <button class="btn--add">Thêm món mới</button>
+                    </form>
+                </div>
+
+                <!-- EMPLOYEE NOTIFICATION -->
+                <div id="employee-notication" class="bar-target manage__book">
+                    <form class="manage__book--form">
+                        <h3 style="margin: 30px;" class="manage__book--title">THÔNG BÁO</h3>
+
+                        <ul class="manage__book--list">
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/intro/sale.png" alt="" class="manage__book--img">
+                                <p class="manage__book--descibe">
+                                    Từ ngày 20 tháng 10 năm 2023 đến ngày 20 tháng 11 năm 2023, chúng tôi sẽ cung cấp
+                                    giảm
+                                    giá lớn cho tất cả các sản phẩm trong cửa hàng của chúng tôi. Bạn sẽ có cơ hội mua
+                                    được
+                                    các sản phẩm yêu thích với giá cả ưu đãi và hấp dẫn.
+                                </p>
+
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/intro/sale.png" alt="" class="manage__book--img">
+                                <p class="manage__book--descibe">
+                                    Từ ngày 20 tháng 10 năm 2023 đến ngày 20 tháng 11 năm 2023, chúng tôi sẽ cung cấp
+                                    giảm
+                                    giá lớn cho tất cả các sản phẩm trong cửa hàng của chúng tôi. Bạn sẽ có cơ hội mua
+                                    được
+                                    các sản phẩm yêu thích với giá cả ưu đãi và hấp dẫn.
+                                </p>
+
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+                            <li class="manage__book--item">
+                                <img src="/assets/images/intro/sale.png" alt="" class="manage__book--img">
+                                <p class="manage__book--descibe">
+                                    Từ ngày 20 tháng 10 năm 2023 đến ngày 20 tháng 11 năm 2023, chúng tôi sẽ cung cấp
+                                    giảm
+                                    giá lớn cho tất cả các sản phẩm trong cửa hàng của chúng tôi. Bạn sẽ có cơ hội mua
+                                    được
+                                    các sản phẩm yêu thích với giá cả ưu đãi và hấp dẫn.
+                                </p>
+
+                                <button class="btn--delete">
+                                    <i class="btn--icon fa-solid fa-trash"></i>
+                                </button>
+                            </li>
+
+
+                        </ul>
+                        <div class="paging">
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-left-long"></i>
+                            </button>
+                            <button class="btn--number">1</button>
+                            <button class="btn--number">2</button>
+                            <button class="btn--number">3</button>
+                            <button class="btn--number">...</button>
+                            <button class="btn--number">
+                                <i class="btn--icon fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- EMPLOYEE ONLINE ORDER -->
+                <div id="employee-onlorder" class=" bar-target manage__book">
+                    <ul class="customer__function--list">
+
+                        <li class="customer__function--item">
+                            <a href="#" class="all-order active menu-link">
+                                <i class="customer__function--icon fa-brands fa-buysellads"></i>
+                                <h3 class="customer__function--title">Tất cả</h3>
+                            </a>
+                        </li>
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="waiting-order">
+                                <i class="customer__function--icon fa-solid fa-check-to-slot"></i>
+                                <h3 class="customer__function--title">Chờ được xác nhận</h3>
+                            </a>
+                        </li>
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="preparing-order">
+                                <i class="customer__function--icon fa-solid fa-mug-hot"></i>
+                                <h3 class="customer__function--title">Đang chuẩn bị</h3>
+                            </a>
+                        </li>
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="shiping-order">
+                                <i class="customer__function--icon fa-solid fa-truck"></i>
+                                <h3 class="customer__function--title">Đang giao hàng</h3>
+                            </a>
+                        </li>
+
+                        <li class="customer__function--item">
+                            <a href="#" class="menu-link" data-target="shiped-order">
+                                <i class="customer__function--icon fa-solid fa-table"></i>
+                                <h3 class="customer__function--title">Lịch sử đơn hàng</h3>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="order__search">
+                        <i class="order__search--icon fa-solid fa-search"></i>
+                        <input placeholder="Tìm kiếm đơn hàng" type="text" class="order__search--input">
+                    </div>
+                    <div class="order__fn">
+                        <!-- Waiting Confirm -->
+                        <ul id="waiting-order" class="menu-target order__listt">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 12872</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Đỗ Cao Cường
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        72 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 83231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 217122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="view__item cart__item--img" src="/assets/images/menu/capuchino.jpg"
+                                            alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 272122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Phạm Văn Vững
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        87 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/coffe.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 7823122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Nguyễn Lâm Chi
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Phương Mai, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Khi nhận hàng</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Đang chờ xác nhận</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/capuchino.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Xác nhận đơn hàng</button>
+                            </li>
+                        </ul>
+                        <!-- Preparing -->
+                        <ul id="preparing-order" class="order__list menu-target">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 89122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang chờ chuẩn bị</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/latte.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/black.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Chuẩn bị xong</button>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 656122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Nguyễn Chí DŨng
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Hoàng Mai, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="blue">Tại Quầy</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang chờ chuẩn bị</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--delete">Hủy đơn hàng</button>
+                                <button class="btn--exit">Chuẩn bị xong</button>
+
+                            </li>
+                        </ul>
+                        <!-- Shiping -->
+                        <ul id="shiping-order" class="order__list menu-target order-preparing">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 78122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--exit">Đã giao</button>
+
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 87122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--exit">Đã giao</button>
+
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Đang giao hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                                <button class="btn--exit">Đã giao</button>
+                            </li>
+                        </ul>
+
+                        <!-- Success -->
+                        <ul id="shiped-order" class="order__list menu-target order-preparing">
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 9283122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Giao hàng thành công</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 4</p>
+                                <p class="order__text">Tổng giá tiền: 80.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/beefsteak.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Chuyển khoản</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="green">Giao hàng thành công</p>
+                                </div>
+
+                                <p class="order__text">Tổng số lượng sản phẩm: 8</p>
+                                <p class="order__text">Tổng giá tiền: 160.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/cream.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/capuchino.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/fish.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="order__item">
+                                <p class="order__text">Mã đơn hàng: 23231232</p>
+                                <p class="order__text">Thời gian đặt hàng: 12:20 Thứ Năm 24/10/2023</p>
+                                <p class="order__text">Mã khách hàng: 122</p>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Tên người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        Vũ Kim Tuyến
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">
+                                        Địa chỉ người nhận:
+                                    </p>
+                                    <p class="blue">
+                                        837 Kim Ngưu, Đống Đa, Hà Nội
+                                    </p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Loại đơn hàng:</p>
+                                    <p class="green">Online</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Hình thức thanh toán:</p>
+                                    <p class="red">Khi nhận hàng</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Trạng thái đơn hàng:</p>
+                                    <p class="red">Giao hàng không thành công</p>
+                                </div>
+                                <div class="order__text">
+                                    <p class="order__text">Lý do:</p>
+                                    <p class="red">Khách hàng từ chối nhận hàng</p>
+                                </div>
+                                <p class="order__text">Tổng số lượng sản phẩm: 2</p>
+                                <p class="order__text">Tổng giá tiền: 40.000 đ</p>
+                                <p class="order__text">Danh sách sản phẩm:</p>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/muoi.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                    <li class="cart__item">
+                                        <img class="cart__item--img" src="/assets/images/menu/banhquy.jpg" alt="">
+                                        <p class="order__text">Coffe Mocha</p>
+                                        <p class="order__text">Ít đá, Ít đường</p>
+                                        <p class="order__text">20.000 đ</p>
+                                        <p class="order__text">Số lượng: 2</p>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                        <button class="btn--exit">Xem thêm</button>
+                    </div>
+
+                    <script src="/scripts/order.js"></script>
+                </div>
+                <!-- EMPLOYEE DIRECT ORDER -->
+                <div id="employee-bill" class="bar-target manage__book">
+
+                    <form class=" manage__book--form">
+                        <h3 class="manage__book--title">Đơn Hàng Tại Quầy</h3>
+                        <div class="emp__direct--order">
+                            <div class="emp__add--order">
+                                <button class="manage__book--item">
+                                    <i style="color:var(--black-color)" class="fa-solid fa-barcode"></i>
+                                    <p class="">Sử dụng máy quét</p>
+                                </button>
+                                <input placeholder="Nhập mã sản phẩm" type="text" class="emp__add--input">
+                                <button class="btn--edit">Thêm Sản Phẩm</button>
+                            </div>
+                            <ul style="width:550px;" class="manage__book--list">
+                                <p class="manage__book--title2">
+                                    Danh sách sản phẩm
+                                </p>
+
+                                <li class="manage__book--item">
+                                    <p class="manage__book--name">STT</p>
+                                    <p class="manage__book--name">ID</p>
+                                    <p class="manage__book--name">Hình ảnh</p>
+                                    <p class="manage__book--name">Tên sản phẩm</p>
+                                    <p class="manage__book--name">Đơn giá</p>
+                                    <p class="manage__book--name">Số lượng</p>
+                                    <p class="manage__book--name">Xóa</p>
+                                </li>
+
+
+                                <li class="manage__book--item">
+                                    <p class="manage__book--name">1</p>
+                                    <p class="manage__book--name">28172</p>
+                                    <img src="/assets/images/menu/latte.jpg" alt="" class="manage__book--img">
+                                    <p class="manage__book--name">Latte</p>
+                                    <p class="manage__book--name">40.000 đ</p>
+                                    <p class="manage__book--name">1</p>
+
+                                    <button class="btn--delete">
+                                        <i class="btn--icon fa-solid fa-trash"></i>
+                                    </button>
+                                </li>
+
+                                <li class="manage__book--item">
+                                    <p class="manage__book--name">1</p>
+                                    <p class="manage__book--name">28172</p>
+                                    <img src="/assets/images/menu/muoi.jpg" alt="" class="manage__book--img">
+                                    <p class="manage__book--name">Capuchino</p>
+                                    <p class="manage__book--name">30.000 đ</p>
+                                    <p class="manage__book--name">1</p>
+
+                                    <button class="btn--delete">
+                                        <i class="btn--icon fa-solid fa-trash"></i>
+                                    </button>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <div class="employee__print--bill">
+                            <div class="employee__print">
+                                <img id="qr-pay" src="/assets/images/payment.jpeg" alt="" class="employee__print--qr">
+                            </div>
+                            <label for="employee__select--payment" class="employee__print--text">Hình thức thanh
+                                toán:
+                            </label>
+                            <select id="qr-payment" class="employee__select--payment">
+                                <option class="employee__print--text" value="Thanh toán bằng tiền mặt" selected>
+                                    <p class="employee__print--text">
+                                        Thanh toán bằng tiền mặt
+                                    </p>
+                                    <i class="fa-solid fa-money-bill"></i>
+                                </option>
+                                <option class="employee__print--text" value="Thanh toán bằng tiền mặt">
+                                    <p class="employee__print--text">
+                                        Thanh toán chuyển khoản
+                                    </p>
+                                    <i class="employee__print--text fa-solid fa-money-bill"></i>
+                                </option>
+
+                            </select>
+
+                            <div class="employee__print--item">
+                                <p class="employee__print--text">Tổng số lượng sản phẩm:</p>
+                                <p class="employee__print--text red">2</p>
+                            </div>
+                            <div class="employee__print--item">
+                                <p class="employee__print--text">Tổng giá tiền:</p>
+                                <p class="employee__print--text red">70.000 đ</p>
+                            </div>
+                            <button class="show-bill btn--add">In hóa đơn</button>
+                            <button class="btn--logout">Hủy tạo đơn</button>
+                        </div>
+
+                        <!-- CHUYEN KHOAN -->
+                        <div class="show__payment">
+                            <form action="" class="show__form">
+                                <img style="margin: auto;" class="show__QR" src="/assets/images/payment.jpeg" alt="QR">
+
+                            </form>
+                        </div>
+                        <script src="/scripts/showQR.js"></script>
+                    </form>
+
+                    <!-- BILL detail -->
+                    <div class="bill">
+                        <form action="" class="bill__form">
+                            <h3 class="bill__title">Hóa Đơn Cửa Hàng Cà Phê Sách</h3>
+                            <ul class="bill__info">
+                                <li class="bill_item">Mã hóa đơn: 29319389</li>
+                                <li class="bill_item">Thời gian: 12:23:02</li>
+                                <li class="bill_item">Ngày mua: 21/12/2023</li>
+                                <li class="bill_item">Loại hóa đơn: Tại Quầy</li>
+                                <li class="bill_item">Hình thức thanh toán: Chuyển khoản</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">STT</li>
+                                <li class="bill_item">Tên sản phẩm</li>
+                                <li class="bill_item">Số lượng</li>
+                                <li class="bill_item">Đơn giá</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">Coffe mocha</li>
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">30.000 đ</li>
+                            </ul>
+
+                            <ul class="bill__list">
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">Coffe Đen</li>
+                                <li class="bill_item">1</li>
+                                <li class="bill_item">40.000 đ</li>
+                            </ul>
+
+                            <ul class="bill__total">
+                                <li class="bill_item">Tổng số lượng: 2</li>
+                                <li class="bill_item">Tổng giá tiền: 70.000 đ</li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+                <!-- EMPLOYEE BORROW BOOK -->
+                <div id="employee-borrow-book" class="bar-target manage__book">
+                    <form action="" class="employee__borrow--book employee__borrow1">
+
+                        <h3 class="manage__book--title">Xác minh hội viên</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-check-to-slot"></i>
+                            <input placeholder="Nhập Mã thẻ/Số điện thoại hội viên" type="text"
+                                class="employee__borrow--input">
+                        </div>
+                        <button class="btn--exit employee__borrow--next1">Tiếp tục</button>
+                    </form>
+                    <form action="" class="employee__borrow--book employee__borrow2">
+                        <div class="employee__borrow--for">
+                            <h3 class="manage__book--title">Thông tin hội viên</h3>
+                            <p class="manage__book--text">Mã hội viên: 12345678</p>
+                            <p class="manage__book--text">Họ: Nguyễn</p>
+                            <p class="manage__book--text">Tên: Đức Kiên</p>
+                            <p class="manage__book--text">Số điện thoại: 0932443255</p>
+                            <p class="manage__book--text">Địa chỉ: Số nhà 12 Ngõ Giải Phóng, Đồng Tâm, Hai Bà Trưng</p>
+                            <p class="manage__book--text">Ngày đăng ký: 08/11/2023</p>
+                            <div class="employee__borrow--item">
+                                <p class="manage__book--text">Thời gian còn lại:</p>
+                                <p class="manage__book--text green">29 ngày</p>
+
+                            </div>
+                            <div class="employee__borrow--item">
+                                <p class="manage__book--text">Số sách đã mượn:</p>
+                                <p class="manage__book--text red">1</p>
+                            </div>
+                            <div class="employee__borrow--item">
+                                <p class="manage__book--text">Số sách có thể mượn:</p>
+                                <p class="manage__book--text green">2/3</p>
+                            </div>
+                        </div>
+
+                        <div class="employee__borrow--form">
+                            <h3 class="manage__book--title">Mượn Sách</h3>
+                            <input placeholder="Nhập mã sách" type="text" class="employee__borrow--input">
+                            <div class="employee__borrow--item">
+
+                                <label for="" class="employee__borrow-text">Ngày mượn:</label>
+                                <input placeholder="Ngày mượn" type="date" class="employee__borrow--input">
+                                <label for="" class="employee__borrow-text">Ngày trả:</label>
+                                <input placeholder="Ngày trả" type="date" class="employee__borrow--input">
+                            </div>
+                            <p class="red">* Ngày trả cần phải nhỏ hơn Thời gian còn lại</p>
+                            <button class="btn--edit">Xác nhận</button>
+                        </div>
+
+                        <button class="btn--exit employee__borrow--next2">In phiếu mượn</button>
+                    </form>
+
+                </div>
+                <script src="/scripts/borrowbooks.js"></script>
+                <!-- PREMIUM SIGN-UP -->
+                <div id="signup-premium" class="bar-target manage__book">
+                    <form action="" class="employee__confirm--form1 employee__signup--premium1">
+                        <h3 class="manage__book--title">ĐĂNG KÝ HỘI VIÊN</h3>
+                        <div class="manage__book--search">
+                            <input placeholder="Nhập Họ" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <div class="manage__book--search">
+                            <input placeholder="Nhập Tên" type="text" class="manage__book--seach-input ">
+                        </div>
+
+                        <div class="manage__book--search">
+                            <input placeholder="Nhập Địa chỉ" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <div class="manage__book--search">
+                            <input placeholder="Nhập số điện thoại" type="text" class="manage__book--seach-input ">
+                        </div>
+                        <button class="btn--exit pre_page-signup1">Tiếp tục</button>
+                    </form>
+                    <form action="" class="employee__confirm--form employee__signup--premium2">
+                        <h3 class="manage__book--title">Chọn Gói Hội Viên</h3>
+
+                        <p class="manage__book--text">Danh sách gói:</p>
+                        <ul class="premium__package--list">
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 1 tháng</p>
+                                <p class="manage__book-text">Giá: 199.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 3 tháng</p>
+                                <p class="manage__book-text">Giá: 229.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 6 tháng</p>
+                                <p class="manage__book-text">Giá: 299.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 12 tháng</p>
+                                <p class="manage__book-text">Giá: 399.000 đ</p>
+                            </li>
+                        </ul>
+                        <button class="btn--exit pre_page-signup2">Tiếp tục</button>
+                    </form>
+                    <form action="" class="employee__confirm--form employee__signup--premium3">
+                        <h3 class="manage__book--title">Chúc mừng quý khách trở thành hội viên!</h3>
+                        <button class="premium__home pre_page-signup3">Thoát</button>
+                    </form>
+                </div>
+
+                <!-- EXTEND PREMIUM FUNCTION -->
+                <div id="extend-premium" class="bar-target manage__book">
+                    <form action="" class="employee__confirm--form1 employee__confirm--premium1">
+                        <h3 class="manage__book--title">GIA HẠN HỘI VIÊN</h3>
+                        <div class="manage__book--search">
+                            <i class="manage__book--search-icon fa-solid fa-check-to-slot"></i>
+                            <input placeholder="Nhập Mã thẻ/Số điện thoại hội viên" type="text"
+                                class="manage__book--seach-input ">
+                        </div>
+                        <button class="btn--exit pre_page1">Tiếp tục</button>
+                    </form>
+                    <form action="" class="employee__confirm--form employee__confirm--premium2">
+                        <h3 class="manage__book--title">Chọn Gói Hội Viên</h3>
+                        <p class="manage__book--text">Mã hội viên: 12345678</p>
+                        <p class="manage__book--text">Thời gian còn lại:</p>
+                        <p class="red">3 ngày</p>
+                        <p class="manage__book--text">Danh sách gói:</p>
+                        <ul class="premium__package--list">
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 1 tháng</p>
+                                <p class="manage__book-text">Giá: 199.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 3 tháng</p>
+                                <p class="manage__book-text">Giá: 229.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 6 tháng</p>
+                                <p class="manage__book-text">Giá: 299.000 đ</p>
+                            </li>
+
+                            <li class="premium__package--item">
+                                <input type="checkbox">
+                                <p class="manage__book--text">Gói 12 tháng</p>
+                                <p class="manage__book-text">Giá: 399.000 đ</p>
+                            </li>
+                        </ul>
+                        <button class="btn--exit pre_page2">Tiếp tục</button>
+                    </form>
+                    <form action="" class="employee__confirm--form employee__confirm--premium3">
+                        <h3 class="manage__book--title">Chúc mừng quý khách gia hạn thành công!</h3>
+                        <button class="premium__home pre_page3">Thoát</button>
+                    </form>
+                </div>
+                <script src="/scripts/premium.js"></script>
+
+
+            </div>
+        </div>
+        <script src="/scripts/navbar.js"></script>
+        <script src="/scripts/changemenu.js"></script>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">VỀ CHÚNG TÔI</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Di sản</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Công ty</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">DỊCH VỤ KHÁCH HÀNG</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Câu hỏi thường gặp</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Hotline</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN KẾT NHANH</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. Dịch vụ cửa hàng</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. Dành cho đối tác</a>
+                </li>
+            </ul>
+
+            <ul class="footer__describe--list">
+                <li class="footer__describe--item">
+                    <h3 class="footer__descibe--title">LIÊN HỆ</h3>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">1. GOOGLE</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">2. FACEBOOK</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">3. GMAIL</a>
+                </li>
+                <li class="footer__describe--item">
+                    <a href="" class="footer__describe--link">4. Địa chỉ: 55 Giải Phóng, Đồng Tâm, Hai Bà Trung, Hà
+                        Nội</a>
+                </li>
+
+            </ul>
+        </footer>
+        <!-- PROFILE -->
+        <div class="profile">
+            <form class="profile__form">
+                <h3 class="profile__title">Thông tin người dùng</h3>
+                <i class="profile__user--icon fa-solid fa-user"></i>
+                <p class="profile__user--name">Đào Đức Huy</p>
+                <ul class="profile__list">
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên tài khoản:</p>
+                        <p class="profile__item--info">Đào Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Họ:</p>
+                        <p class="profile__item--info">Đào</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Tên:</p>
+                        <p class="profile__item--info">Đức Huy</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Giới tính:</p>
+                        <p class="profile__item--info">Nam</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ email:</p>
+                        <p class="profile__item--info">huy0215066@huce.edu.vn</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Địa chỉ người dùng:</p>
+                        <p class="profile__item--info">Hải Phòng</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Số điện thoại:</p>
+                        <p class="profile__item--info">0912345678</p>
+                    </li>
+
+                    <li class="profile__item">
+                        <p class="profile__item--title">Quyền người dùng:</p>
+                        <p class="profile__item--info">Quản lý</p>
+                    </li>
+                </ul>
+                <div class="profile__function">
+                    <a href="index.html" class="">
+                        <button class="btn--logout">
+                            Đăng xuất
+                        </button>
+                    </a>
+                    <button class="btn">Đổi Mật Khẩu</button>
+                    <button class="btn--edit">
+                        <i class="btn--icon fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="profile-exit btn--exit">
+                        <i class="service__login--icon fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="/scripts/base.js"></script>
+        <script src="/scripts/profile.js"></script>
+        <!-- SHOW MENU -->
+        <div class="show__item">
+            <form action="" class="form__item">
+                <div class="form__img">
+                    <img src="/assets/images/menu/latte.jpg" alt="" class="form__item--img">
+                </div>
+                <div class="ul form__item--info">
+                    <h3 class="form__item--name">Cà phê</h3>
+                    <p class="form__item--text">Mô tả: Cà phê là món thức uống gần như mỗi ngày của thế giới. Người uống
+                        vì cần sự tỉnh táo cho ngày mới. Người thưởng thức vì yêu thích hương vị tuyệt vời của nó. Có
+                        người chỉ uống vì một thói quen đơn giản.</p>
+                    <p class="form__item--text">Tùy chọn size: </p>
+                    <ul class="size__list">
+                        <li class="size__item">M</li>
+                        <li class="size__item">L</li>
+                        <li class="size__item">XL</li>
+                    </ul>
+                    <p class="form__item--text">Gía tiền: 20.000 đ</p>
+                </div>
+
+                <div class="form__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showitem.js"></script>
+
+        <!-- SHOW BOOK -->
+        <div class="show__book">
+            <form action="" class="form__book">
+                <div class="form__img">
+                    <img src="" alt="" class="form__book--img">
+                </div>
+                <div class="ul form__book--info">
+                    <h3 class="form__book--name">Dế mèn phiêu lưu ký</h3>
+                    <p class="form__book--text">Mã sách: 12938123</p>
+                    <p class="form__book--text">Tên tác giả: Tô Hoài</p>
+                    <p class="form__book--text">Thể loại: Fiction</p>
+                    <p class="form__book--text">Nhà xuất bản: Nhà Xuất Bản Văn Học</p>
+                    <p class="form__book--descibe">Tác phẩm kinh điển Dế Mèn Phiêu Lưu Ký cử nhà văn Tô Hoài đã gắn liền
+                        với tuổi thơ của rất nhiều người.
+
+                        Dế Mèn phiêu lưu ký được xem là những trang văn mẫu mực của văn học thiếu nhi. Dường như mọi
+                        câu, đoạn, hình ảnh đều tác động mạnh mẽ đến tư tưởng tình cảm thẩm mỹ của người đọc. Tác phẩm
+                        miêu tả cuộc phiêu lưu của một chú Dế Mèn qua thế giới loài vật và loài người.
+
+                        Những vấn đề nóng hổi như là: cái thiện và cái ác, chiến tranh và hòa bình, lí tưởng và lẽ sống
+                        được thể hiện một cách nhẹ nhàng, tinh tế mà sâu sắc. Mèn đã trải qua những cuộc phiêu lưu vào
+                        thế giới các loài vật, vượt qua cơ man nào là rủi ro và biến cố, nhưng từng bước Mèn vươn lên tự
+                        điều chỉnh, tự nhận thức để trở thành con người giàu lí tưởng và ham hiểu biết với bản lĩnh kiên
+                        cường của một trai tráng đầu đội trời chân đập đất.
+
+                        Chúng ta sẽ được lạc vào thế giới loài vật gần gũi, thân thương với toàn những con vật gắn chặt
+                        với đời sống thôn quê dân dã như: bác Xiến Tóc, Võ sĩ bọ ngựa, Châu Chấu Voi, Ếch Cốm, Chuồn
+                        Chuồn…</p>
+                    <p class="form__book--text">Trạng thái:</p>
+                    <button class="btn--add">Đang còn</button>
+                </div>
+
+                <div class="book__cancel">X</div>
+            </form>
+        </div>
+        <script src="/scripts/showbook.js"></script>
+</body>
+
+</html>

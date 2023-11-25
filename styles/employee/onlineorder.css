@@ -1,0 +1,25 @@
+.onl--order {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.onl__order--list {
+    width: 100%;
+}
+
+.onl__order--item {
+    display: flex;
+    background-color: #f0f0f0;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.onl__order--item-text {}
