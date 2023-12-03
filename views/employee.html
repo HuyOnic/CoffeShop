@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/styles/showbook.css">
     <link rel="stylesheet" href="/styles/employee/employee.css">
     <link rel="stylesheet" href="/styles/customer/cart.css">
-
+    <link rel="stylesheet" href="/styles/premiumcard.css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="view-profile service__signup">
                         <i class="service__signup--icon fa-solid fa-user"></i>
-                        <p class="service__signup--text">Đức Huy</p>
+                        <p class="service__signup--text">Đức Kiên</p>
                     </div>
                 </div>
             </div>
@@ -499,7 +499,7 @@
                             </li>
 
                             <li class="manage__book--item">
-                                <img src="/assets/images/intro/sale.png" alt="" class="manage__book--img">
+                                <img src="/assets/images/intro/blksale.jpg" alt="" class="manage__book--img">
                                 <p class="manage__book--descibe">
                                     Từ ngày 20 tháng 10 năm 2023 đến ngày 20 tháng 11 năm 2023, chúng tôi sẽ cung cấp
                                     giảm
@@ -514,7 +514,7 @@
                             </li>
 
                             <li class="manage__book--item">
-                                <img src="/assets/images/intro/sale.png" alt="" class="manage__book--img">
+                                <img src="/assets/images/intro/sale1.png" alt="" class="manage__book--img">
                                 <p class="manage__book--descibe">
                                     Từ ngày 20 tháng 10 năm 2023 đến ngày 20 tháng 11 năm 2023, chúng tôi sẽ cung cấp
                                     giảm
@@ -1250,8 +1250,8 @@
                         <h3 class="manage__book--title">Đơn Hàng Tại Quầy</h3>
                         <div class="emp__direct--order">
                             <div class="emp__add--order">
-                                <button class="manage__book--item">
-                                    <i style="color:var(--black-color)" class="fa-solid fa-barcode"></i>
+                                <button class="emp__add--input">
+                                    <i style="color:var(--black-color)" class="fa-solid fa-barcode emp__add--img"></i>
                                     <p class="">Sử dụng máy quét</p>
                                 </button>
                                 <input placeholder="Nhập mã sản phẩm" type="text" class="emp__add--input">
@@ -1279,7 +1279,7 @@
                                     <img src="/assets/images/menu/latte.jpg" alt="" class="manage__book--img">
                                     <p class="manage__book--name">Latte</p>
                                     <p class="manage__book--name">40.000 đ</p>
-                                    <p class="manage__book--name">1</p>
+                                    <input type="number" value="1">
 
                                     <button class="btn--delete">
                                         <i class="btn--icon fa-solid fa-trash"></i>
@@ -1292,7 +1292,7 @@
                                     <img src="/assets/images/menu/muoi.jpg" alt="" class="manage__book--img">
                                     <p class="manage__book--name">Capuchino</p>
                                     <p class="manage__book--name">30.000 đ</p>
-                                    <p class="manage__book--name">1</p>
+                                    <input type="number" value="1">
 
                                     <button class="btn--delete">
                                         <i class="btn--icon fa-solid fa-trash"></i>
@@ -1494,8 +1494,52 @@
                     </form>
                     <form action="" class="employee__confirm--form employee__signup--premium3">
                         <h3 class="manage__book--title">Chúc mừng quý khách trở thành hội viên!</h3>
-                        <button class="premium__home pre_page-signup3">Thoát</button>
+                        <button class="premium__home pre_page-signup3">Nhận thẻ hội viên !</button>
                     </form>
+                    <form action="" class="employee__confirm--form premium__card--form">
+                        <div class="premium__form">
+                            <!-- In front -->
+                            <div class="premium__flip--card">
+                                <div class="premium__form--front">
+                                    <div class="premium__front--header">
+                                        <img src="/assets/images/logo.png" alt="" class="premium__front--header-img">
+                                    </div>
+                                    <div class="premium__front--body">
+                                        <h3 class="premium__front--title">Thẻ hội viên</h3>
+                                        <h3 class="premium__front--title">Mã thẻ: 12345678</h3>
+                                    </div>
+                                    <div class="premium__front--footer">
+                                        <h3 class="premium__front--title">https://www.coffebook66cs2.com</h3>
+                                    </div>
+                                </div>
+                                <!-- Behind -->
+                                <div class="premium__form--behind">
+                                    <div class="premium__behind--header">
+                                        <h3 class="premium__front--title">CÀ PHÊ SÁCH 66CS2 NHÓM 1</h3>
+                                    </div>
+                                    <div class="premium__behind--body">
+                                        <h3 class="premium__front--title">Ưu đãi hội viên:</h3>
+                                        <h3 class="premium__front--title">Bạn có thể mượn tối đa lên đến 3 cuốn sách
+                                            cùng lúc</h3>
+                                        <h3 class="premium__front--title">Nhận ưu đái giảm giá 20% khi gọi đồ uống
+                                            (1
+                                            lần 1 tuần)</h3>
+                                        <h3 class="premium__front--title">Cơ hội tham gia các chương trình khuyến
+                                            mại
+                                        </h3>
+                                    </div>
+                                    <div class="premium__behind--footer">
+                                        <img src="/assets/images/barcode.png" alt="" class="premium__behind--img">
+                                        <h3 class="premium__front--title">Địa chỉ: 55 Giải Phóng, Hai Bà Trưng, Hà
+                                            Nội
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <script src="/scripts/card.js"></script>
                 </div>
 
                 <!-- EXTEND PREMIUM FUNCTION -->
@@ -1621,17 +1665,17 @@
                 <ul class="profile__list">
                     <li class="profile__item">
                         <p class="profile__item--title">Tên tài khoản:</p>
-                        <p class="profile__item--info">Đào Đức Huy</p>
+                        <p class="profile__item--info">Nguyễn Đức Kiên</p>
                     </li>
 
                     <li class="profile__item">
                         <p class="profile__item--title">Họ:</p>
-                        <p class="profile__item--info">Đào</p>
+                        <p class="profile__item--info">Nguyễn</p>
                     </li>
 
                     <li class="profile__item">
                         <p class="profile__item--title">Tên:</p>
-                        <p class="profile__item--info">Đức Huy</p>
+                        <p class="profile__item--info">Đức Kiên</p>
                     </li>
 
                     <li class="profile__item">
@@ -1641,12 +1685,12 @@
 
                     <li class="profile__item">
                         <p class="profile__item--title">Địa chỉ email:</p>
-                        <p class="profile__item--info">huy0215066@huce.edu.vn</p>
+                        <p class="profile__item--info">kien021387@huce.edu.vn</p>
                     </li>
 
                     <li class="profile__item">
                         <p class="profile__item--title">Địa chỉ người dùng:</p>
-                        <p class="profile__item--info">Hải Phòng</p>
+                        <p class="profile__item--info">Hà Nội</p>
                     </li>
 
                     <li class="profile__item">
@@ -1656,7 +1700,7 @@
 
                     <li class="profile__item">
                         <p class="profile__item--title">Quyền người dùng:</p>
-                        <p class="profile__item--info">Quản lý</p>
+                        <p class="profile__item--info">Nhân Viên</p>
                     </li>
                 </ul>
                 <div class="profile__function">

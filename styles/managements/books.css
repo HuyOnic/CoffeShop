@@ -144,6 +144,11 @@
     border-radius: 20px;
     padding: 10px 20px;
     margin: 20px;
+    cursor: pointer;
+}
+
+.emp__add--img {
+    font-size: 5rem;
 }
 
 .manage__book--title2 {

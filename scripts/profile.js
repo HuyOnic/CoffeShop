@@ -5,6 +5,7 @@ show_profile.addEventListener('click', function () {
     view_profile.style.display = "flex"
 })
 
-exit_profile.addEventListener('click', function () {
+exit_profile.addEventListener('click', function (event) {
+    event.preventDefault();
     view_profile.style.display = "none"
 })

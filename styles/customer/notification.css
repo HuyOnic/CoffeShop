@@ -8,6 +8,7 @@
     display: none;
     z-index: 8;
     transform-origin: 50% 0%;
+    box-shadow: 2px 2px 5px var(--black-color);
     animation: Grow .4s ease-in-out;
 }
 

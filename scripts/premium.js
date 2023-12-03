@@ -27,7 +27,7 @@ var page_singup3 = document.querySelector('.employee__signup--premium3');
 var next_signup1 = document.querySelector('.pre_page-signup1');
 var next_signup2 = document.querySelector('.pre_page-signup2');
 var next_signup3 = document.querySelector('.pre_page-signup3');
-
+var card_form = document.querySelector('.premium__card--form')
 next_signup1.addEventListener('click', function (event) {
     event.preventDefault();
     page_singup1.style.display = 'none';
@@ -40,3 +40,7 @@ next_signup2.addEventListener('click', function (event) {
     page_singup3.style.display = 'flex';
 })
 
+next_signup3.addEventListener('click', function (event) {
+    event.preventDefault();
+    card_form.style.display = 'flex';
+})
